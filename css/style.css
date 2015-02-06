@@ -1,0 +1,8 @@
+body {
+    background: #eeeeee;
+}
+header {
+    height: 50px;
+    background: #aaa;
+    text-transform: uppercase;
+}
