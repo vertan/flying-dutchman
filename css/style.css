@@ -17,28 +17,26 @@ footer {
 #keypad {
 	font-size: 4em;
 	font-family: sans-serif;
-	/* border: 4px gray outset;
-	background: rgba(255, 255, 255, 0.05); */
 	display: inline-block;
 	text-align: left;
+	vertical-align: middle;
 }
-#keypad button {
+button {
 	border: gray outset 2px;
 	border-radius: .2em;
-	width: 2em;
-	height: 2em;
 	background: rgba(0, 0, 0, 0.05);
 	cursor: pointer;
+	margin: 0.05em;
 	font-size: 1em;
+}
+#keypad button {
 	width: 2em;
 	height: 2em;
-	margin: 0.05em;
+	width: 2em;
+	height: 2em;
 }
 #eraseButton {
 	width: 4.1em !important;
-}
-#loginButton {
-	width: 6.2em !important;
 }
 #loginLogoArea {
 	display: inline-block;
@@ -50,4 +48,30 @@ footer {
 #keypad button:active {
 	background: rgba(0, 0, 0, 0.1);
 	border-style: inset;
-} /* TODO: Try to get rid of button focus box */
+}
+#sideArea {
+	margin-left: 1em;
+	font-size: 4em;
+	display: inline-block;
+	width: 6.2em;
+	height: 8.4em;
+	/* background: rgba(0, 0, 0, 0.05); */
+	vertical-align: middle;
+}
+#pinField {
+	font-size: 0.8em;
+	width: 100%;
+	background: rgba(0, 0, 0, 0.1);
+	text-align: center;
+	border: gray inset 2px;
+	border-radius: .2em;
+	background: rgba(255, 255, 255, 0.05);
+	cursor: pointer;
+	font-size: 1em;
+	margin-top: 0.05em;
+	
+}
+#loginButton {
+	width: 100%;
+	margin-top: 0.2em;
+}
