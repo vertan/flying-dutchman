@@ -1,12 +1,53 @@
 body {
-    background: #eeeeee;
+	background-image: url(../images/flying_dutchman_2.png);
+	background-size: cover;
+	text-align: center;
 }
 header {
-    height: 50px;
-    background: #aaa;
-    text-transform: uppercase;
+    font-size: 1.6em;
+	font-family: serif;
+    font-variant: small-caps;
 }
+/*
 footer {
     height: 25px;
     background: #000;
 }
+*/
+#keypad {
+	font-size: 4em;
+	font-family: sans-serif;
+	/* border: 4px gray outset;
+	background: rgba(255, 255, 255, 0.05); */
+	display: inline-block;
+	text-align: left;
+}
+#keypad button {
+	border: gray outset 2px;
+	border-radius: .2em;
+	width: 2em;
+	height: 2em;
+	background: rgba(0, 0, 0, 0.05);
+	cursor: pointer;
+	font-size: 1em;
+	width: 2em;
+	height: 2em;
+	margin: 0.05em;
+}
+#eraseButton {
+	width: 4.1em !important;
+}
+#loginButton {
+	width: 6.2em !important;
+}
+#loginLogoArea {
+	display: inline-block;
+}
+#loginLogoArea img {
+	width: 30em;
+	height: 30em;
+}
+#keypad button:active {
+	background: rgba(0, 0, 0, 0.1);
+	border-style: inset;
+} /* TODO: Try to get rid of button focus box */
