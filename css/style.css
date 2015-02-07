@@ -75,3 +75,12 @@ button {
 	width: 100%;
 	margin-top: 0.2em;
 }
+#errorMsg {
+	display: none;
+	margin-top: 0.2em;
+	background: rgba(255, 0, 0, 0.5);
+	font-size: 0.5em;
+}
+#errorMsg.show {
+	display: block;
+}
