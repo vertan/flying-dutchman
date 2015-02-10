@@ -3,17 +3,21 @@ body {
 	background-size: cover;
 	text-align: center;
 }
+#container {
+	width: 1024px;
+	margin: 0px auto;
+}
 header {
     font-size: 1.6em;
 	font-family: serif;
     font-variant: small-caps;
 }
 /*
-footer {
-    height: 25px;
-    background: #000;
-}
-*/
+   footer {
+   height: 25px;
+   background: #000;
+   }
+ */
 #keypad {
 	font-size: 4em;
 	font-family: sans-serif;
