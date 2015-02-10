@@ -6,6 +6,7 @@
 		<link rel="stylesheet" href="css/style.css" type="text/css">
 		<script src="js/db.js" type="text/javascript"></script>
 		<script src="js/main.js" type="text/javascript"></script>
+		<script src="js/login.js" type="text/javascript"></script>
 	</head>
 	<body>
 		<div id="container">
@@ -24,11 +25,11 @@
 					<button class="pin-digit">1</button><button class="pin-digit">2</button><button class="pin-digit">3</button>
 					<br>
 					<button class="pin-digit">0</button><button id="eraseButton">⌫</button>
-				</div><div id="sideArea">
+				</div><form id="sideArea" action="#" method="GET">
 					<input type="password" id="pinField">
-					<button id="loginButton">Login</button>
+					<button id="loginButton" type="submit">Login</button>
 					<div id="errorMsg"></div>
-				</div>
+				</form>
 			</div>
 			
 			<footer>
