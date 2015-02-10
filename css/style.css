@@ -12,6 +12,9 @@ header {
 	font-family: serif;
     font-variant: small-caps;
 }
+.content-loggedin {
+	background: #ddd;
+}
 /*
    footer {
    height: 25px;
