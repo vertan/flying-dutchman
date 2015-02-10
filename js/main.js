@@ -13,7 +13,7 @@ function init() {
 	pinField = document.getElementById("pinField");
 	pinButtons = document.getElementsByClassName("pin-digit");
 	console.log(pinButtons, pinButtons.length);
-	for (var i = 0; i <= pinButtons.length; i++) {
+	for (var i = 0; i < pinButtons.length; i++) {
 		pinButtons[i].addEventListener("click", insertSelf, false);
 	}
 	document.getElementById("eraseButton").addEventListener("click", backspace, false);
