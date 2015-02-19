@@ -28,3 +28,16 @@ button:active {
 	transform: scale(0.98);
 	transition: 0ms;
 }
+#top-right {
+	position: fixed;
+	top: .5em;
+	right: .5em;
+	text-align: right;
+}
+#top-right hr {
+	width: 2px;
+	height: 1em;
+	display: inline-block;
+	background: gray;
+	vertical-align: middle;
+}

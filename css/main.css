@@ -1,16 +1,3 @@
-#top-right {
-	position: fixed;
-	top: .5em;
-	right: .5em;
-	text-align: right;
-}
-#top-right hr {
-	width: 2px;
-	height: 1em;
-	display: inline-block;
-	background: gray;
-	vertical-align: middle;
-}
 #berverages-button {
 	font-size: 3em;
 	padding: .3em;
