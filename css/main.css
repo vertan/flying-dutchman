@@ -1,0 +1,40 @@
+#top-right {
+	position: fixed;
+	top: .5em;
+	right: .5em;
+	text-align: right;
+}
+#top-right hr {
+	width: 2px;
+	height: 1em;
+	display: inline-block;
+	background: gray;
+	vertical-align: middle;
+}
+#berverages-button {
+	font-size: 3em;
+	padding: .3em;
+	margin-bottom: 0.5em;
+}
+#favorites {
+	display: inline-block;
+	width: 80%;
+	height: 20em;
+}
+#favorites button {
+	width: 30%;
+	height: 40%;
+	vertical-align: middle;
+}
+#favorites button img {
+	height: 90%;
+	border: gray outset 1px;
+	float: left;
+}
+#favorites button .name {
+	font-size: 1.5em;
+}
+#favorites button .price {
+	float: right;
+	font-size: 1.3;
+}
