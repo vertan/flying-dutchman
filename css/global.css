@@ -20,4 +20,11 @@ button {
 	cursor: pointer;
 	margin: 0.05em;
 	font-size: 1em;
+	transition: 50ms;
+}
+button:active {
+	background: rgba(0, 0, 0, 0.1);
+	border-style: inset;
+	transform: scale(0.98);
+	transition: 0ms;
 }

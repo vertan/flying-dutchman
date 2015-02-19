@@ -30,10 +30,6 @@ footer {
 	width: 30em;
 	height: 30em;
 }
-#keypad button:active {
-	background: rgba(0, 0, 0, 0.1);
-	border-style: inset;
-}
 #sideArea {
 	margin-left: 1em;
 	font-size: 4em;
