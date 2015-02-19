@@ -1,0 +1,38 @@
+.boxed {
+	display: inline-block;
+	text-align: right;
+}
+#filters {
+	display: inline-block;
+}
+#content {
+	text-align:left;
+}
+#beverage-list {
+	border: 1px inset black;
+}
+#beverage-list .name {
+	width: 20em;
+	height: 2em;
+	text-align: left;
+	display: inline-block;
+}
+#beverage-list .image {
+	width: 2em;
+	height: 2em;
+	Text-align: center;
+	display: inline-block;
+}
+#beverage-list .image img {
+	height: 2em;
+	display: inline-block;
+}
+#beverage-list .price {
+	width: 6em;
+	height: 2em;
+	text-align: right;
+	display: inline-block;
+}
+.item *{
+	vertical-align: bottom;
+}

@@ -1,0 +1,93 @@
+body {
+	background-image: url(../images/flying_dutchman_2.png);
+	background-size: cover;
+	text-align: center;
+}
+#container {
+	width: 1024px;
+	margin: 0px auto;
+}
+header {
+    font-size: 1.6em;
+	font-family: serif;
+    font-variant: small-caps;
+}
+.content-loggedin {
+	background: #ddd;
+}
+/*
+   footer {
+   height: 25px;
+   background: #000;
+   }
+ */
+#keypad {
+	font-size: 4em;
+	font-family: sans-serif;
+	display: inline-block;
+	text-align: left;
+	vertical-align: middle;
+}
+button {
+	border: gray outset 2px;
+	border-radius: .2em;
+	background: rgba(0, 0, 0, 0.05);
+	cursor: pointer;
+	margin: 0.05em;
+	font-size: 1em;
+}
+#keypad button {
+	width: 2em;
+	height: 2em;
+	width: 2em;
+	height: 2em;
+}
+#eraseButton {
+	width: 4.1em !important;
+}
+#loginLogoArea {
+	display: inline-block;
+}
+#loginLogoArea img {
+	width: 30em;
+	height: 30em;
+}
+#keypad button:active {
+	background: rgba(0, 0, 0, 0.1);
+	border-style: inset;
+}
+#sideArea {
+	margin-left: 1em;
+	font-size: 4em;
+	display: inline-block;
+	width: 6.2em;
+	height: 8.4em;
+	/* background: rgba(0, 0, 0, 0.05); */
+	vertical-align: middle;
+}
+#pinField {
+	font-size: 0.8em;
+	width: 100%;
+	background: rgba(0, 0, 0, 0.1);
+	text-align: center;
+	border: gray inset 2px;
+	border-radius: .2em;
+	background: rgba(255, 255, 255, 0.05);
+	cursor: pointer;
+	font-size: 1em;
+	margin-top: 0.05em;
+	
+}
+#loginButton {
+	width: 100%;
+	margin-top: 0.2em;
+}
+#errorMsg {
+	display: none;
+	margin-top: 0.2em;
+	background: rgba(255, 0, 0, 0.5);
+	font-size: 0.5em;
+}
+#errorMsg.show {
+	display: block;
+}
