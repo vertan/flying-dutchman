@@ -38,6 +38,9 @@ button:active {
 	transform: scale(0.98);
 	transition: 0ms;
 }
+button.big {
+	font-size: 3em;
+}
 #top-right {
 	position: fixed;
 	top: .5em;
