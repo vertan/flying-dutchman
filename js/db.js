@@ -1,6 +1,8 @@
-function Database(url, username, password) {
-	this.url = url;
+DEFAULT_DB_URL = "http://pub.jamaica-inn.net/fpdb/api.php";
+
+function Database(username, password, url) {
 	this.username = username;
+	this.url = url ? url : DEFAULT_DB_URL;
 	this.request = function (action, recceiver) {
 		var xhr = new XMLHttpRequest();
 		xhr.onreadystatechange = function () {
@@ -12,7 +14,7 @@ function Database(url, username, password) {
 				recceiver(r);
 			}
 		};
-		xhr.open('GET', url + '?action=' + action + '&username=' + this.username + '&password=' + password);
+		xhr.open('GET', this.url + '?action=' + action + '&username=' + this.username + '&password=' + password);
 		xhr.send();
 	};
 };
@@ -21,7 +23,7 @@ function handleRequestError(xhr, error) {
 }
 
 /* Example
-var db = new Database('http://pub.jamaica-inn.net/fpdb/api.php', 'jorass', 'jorass');
+var db = new Database('jorass', 'jorass', 'http://pub.jamaica-inn.net/fpdb/api.php');
 db.request('purchases_get', function (r) {
 	console.info('Got %i items: %o', r.payload.length, r);
 });

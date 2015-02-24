@@ -30,6 +30,7 @@ footer {
 	width: 30em;
 	height: 30em;
 }
+#loginForm,
 #sideArea {
 	margin-left: 1em;
 	font-size: 4em;
@@ -39,15 +40,12 @@ footer {
 	/* background: rgba(0, 0, 0, 0.05); */
 	vertical-align: middle;
 }
+#username,
+#password,
 #pinField {
 	font-size: 0.8em;
 	width: 100%;
-	background: rgba(0, 0, 0, 0.1);
 	text-align: center;
-	border: gray inset 2px;
-	border-radius: .2em;
-	background: rgba(255, 255, 255, 0.05);
-	cursor: pointer;
 	font-size: 1em;
 	margin-top: 0.05em;
 	

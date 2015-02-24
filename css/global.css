@@ -1,6 +1,7 @@
 body {
 	background-image: url(../images/flying_dutchman_2.png);
 	background-size: cover;
+	color: black;
 	text-align: center;
 }
 #container {
@@ -12,11 +13,20 @@ header {
 	font-family: serif;
     font-variant: small-caps;
 }
+input[type="text"],
+input[type="password"],
+input[type="number"],
+textarea {
+	border: gray inset 2px;
+	border-radius: .2em;
+	background: rgba(255, 255, 255, 0.05);
+	color: inherit;
+}
 button {
 	border: gray outset 2px;
 	border-radius: .2em;
 	background: rgba(0, 0, 0, 0.05);
-	color: black;
+	color: inherit;
 	cursor: pointer;
 	margin: 0.05em;
 	font-size: 1em;
