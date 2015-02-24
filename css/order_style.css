@@ -1,0 +1,81 @@
+#container {
+		background-color: rgba(255,255,255,0); /* 0.6 */
+		height: 95%;
+		position: relative;
+}
+#buttons {
+		bottom: 0px;
+		font-size: 3em;
+		margin: 10px;
+		padding: 0 0px;
+		position: absolute;
+		text-align: center;
+		width: 1000px;
+}
+table {
+		border: 0px;
+		border-collapse: separate;
+		border-spacing: 0 5px;
+		/* margin: 10px; */
+		padding: 0 10px;
+		width: 1004px;
+}
+table button {
+		font-size: 1.5em;
+		min-width: 40px;
+}
+
+thead {
+		background-color: rgba(255, 255, 255, 0.6);
+		font-weight: bold;
+}
+tfoot {
+		font-weight: bold;
+}
+tr {
+		height: 50px;
+}
+
+tr:nth-child(2n) {
+		background-color: rgba(255,255,255,0.6);w
+}
+tr:nth-child(2n+1) {
+		background-color: rgba(240,240,240,0.6);
+}
+
+td {
+		min-width: 50px;
+		max-width: 200px;
+		text-align: right;
+}
+#table_afterorder td {
+		min-width: 100px;
+		text-align: center;
+}
+
+td:nth-child(2),
+td:nth-child(3),
+td:nth-child(4),
+td:last-child {
+		text-align: center;
+		width: 50px;
+}
+tfoot td:nth-child(2) {
+		text-align: right;
+}
+
+td:first-child,
+td:last-child {
+		padding: 0 1em;
+}
+#table_order td:first-child, #table_afterorder td:first-child {
+		text-align: left;
+}
+
+#cancel {
+		float: left;
+}
+#add, #buy, #logout {
+		float: right;
+		margin-left: 10px;
+}
