@@ -4,15 +4,42 @@ body {
 	color: black;
 	text-align: center;
 }
+
+#navbar {
+	display: inline-block;
+	position: fixed;
+	left: 1em;
+	top: 1em;
+}
+#navbar .icon {
+	display: inline-block;
+	width: 1em;
+	height: 1em;
+	vertical-align: middle;
+	background-size: contain;
+	font-size: 2em;
+}
+#navbar #nav-up .icon {
+	background-image: url("../images/up.svg");
+}
+#navbar #nav-undo .icon {
+	background-image: url("../images/undo.svg");
+}
+#navbar #nav-redo .icon {
+	background-image: url("../images/redo.svg");
+}
+
 #container {
 	width: 1024px;
 	margin: 0px auto;
 }
+
 header {
     font-size: 1.6em;
 	font-family: serif;
     font-variant: small-caps;
 }
+
 input[type="text"],
 input[type="password"],
 input[type="number"],
@@ -22,6 +49,7 @@ textarea {
 	background: rgba(255, 255, 255, 0.05);
 	color: inherit;
 }
+
 button {
 	border: gray outset 2px;
 	border-radius: .2em;
@@ -41,6 +69,7 @@ button:active {
 button.big {
 	font-size: 3em;
 }
+
 #top-right {
 	position: fixed;
 	top: .5em;
@@ -54,3 +83,4 @@ button.big {
 	background: gray;
 	vertical-align: middle;
 }
+

@@ -3,14 +3,30 @@
 	<head>
 		<meta charset="utf-8">
 		<title>The Flying Dutchman</title>
+		<link rel="stylesheet" href="css/global.css" type="text/css">
 		<link rel="stylesheet" href="css/user_management.css" type="text/css">
 		<script src="js/db.js" type="text/javascript"></script>
 	</head>
 	<body>
-	<button id="back">Back</button>
-	<header>
-		<h1>Manage user</h1>
-	</header>
+		<div id="navbar">
+			<button id="nav-up">
+				<div class="icon"></div>
+				Up
+			</button>
+			<button id="nav-undo">
+				<div class="icon"></div>
+				Undo
+			</button>
+			<button id="nav-redo">
+				<div class="icon"></div>
+				Redo
+			</button>
+		</div>
+		
+		<header>
+			<h1>Manage user</h1>
+		</header>
+		
 		<p>FirstName LastName</p>
 		<div id="userBox">
 			<table id="userDetails">
