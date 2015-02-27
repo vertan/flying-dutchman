@@ -76,3 +76,26 @@ table.orders th {
 table.orders tr:hover {
 	background-color: rgba(0,0,0,0.05);
 }
+
+/*** Payments ***/
+table.payment {
+	width: 100%;
+	border-spacing: 0px;
+}
+table.payment thead {
+	text-align: left;
+	padding-left: 20px;
+    text-transform: uppercase;
+}
+table.payment td {
+	padding: 5px;
+	padding-left: 20px;
+}
+table.payment th {
+	padding: 5px;
+	padding-left: 20px;
+	border-bottom: 3px solid #aeaeae;	
+}
+table.payment tr:hover {
+	background-color: rgba(0,0,0,0.05);
+}
