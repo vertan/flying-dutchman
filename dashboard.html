@@ -7,7 +7,7 @@
 		
 	</head>
 	<body>
-		<a href="admin.html"><button id="back">Back</button></a>
+		<a href="admin-menu.html"><button id="back">Back</button></a>
 		<div id="container">
 			<header>
 				<h1>Bartender dashboard</h1>
@@ -16,9 +16,9 @@
 				<div id="popular-section">
 					<h2>Popular items</h2>
 					<ul class="popular">
-						<span class="add-popular">+</span><li>Heineken</li>
-						<span class="add-popular">+</span><li>Oppigårds</li>
-						<span class="add-popular">+</span><li>Norrlands guld</li>
+						<li><span class="add-popular">+</span><div class="article">Heineken</div></li>
+						<li><span class="add-popular">+</span><div class="article">Oppigårds</div></li>
+						<li><span class="add-popular">+</span><div class="article">Norrlands guld</div></li>
 					</ul>
 				</div>
 				<div id="button-section">
@@ -31,10 +31,29 @@
 				<div id="cart-section">
 					<h2>Cart</h2>
 					<div id="cart">
-						<ul>
-							<li>2 Heineken</li>
-							<li>1 Norrlands Guld</li>
-						</ul>
+						<table class="cart">
+							<thead>
+								<tr>
+									<th>Article</th>
+									<th>Amount</th>
+									<th>Cost</th>
+								</tr>
+							</thead>
+							<tr>
+								<td>Heineken</td>
+								<td>2</td>
+								<td>70</td>
+							</tr>
+							<tr>
+								<td>Norrlands Guld</td>
+								<td>1</td>
+								<td>30</td>
+							</tr>					
+						</table>
+						<div class="cost-total">
+							Total cost: 100 SEK
+						</div>
+						<a href="admin-checkout.html"><button id="checkout">Checkout</button></a>
 					</div>
 				</div>				
 			</div>
