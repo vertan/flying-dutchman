@@ -28,17 +28,16 @@
 	float: left;	
 	padding: 20px;
 }
-ul {
+.stats ul {
 	float: left;
 }
-ul li {
+.stats ul li {
 	font-size: 1.7em;
 	list-style: none;
 	margin-left: 0px;
 	display: block;
 	padding-top: 10px;
 }
-
 .pieces {
 	padding: 2px;
 	color: #fff;
@@ -54,3 +53,5 @@ ul li {
 .min-20 {
 	background: #e0de30;
 }
+
+
