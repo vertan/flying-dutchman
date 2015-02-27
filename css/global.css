@@ -1,11 +1,12 @@
 h1, h2, h3, h4 {
 	font-family: 'Helvetica', 'Arial';
 }
-
 a {
 	color: black;
 }
-
+ul {
+	padding: 0px;
+}
 body {
 	font-family: 'Helvetica', 'Arial';
 	background-image: url(../images/flying_dutchman_2.png);
