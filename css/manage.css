@@ -59,17 +59,20 @@ table.orders {
 	width: 100%;
 	border-spacing: 0px;
 }
-table thead {
+table.orders thead {
 	text-align: left;
 	padding-left: 20px;
-
+    text-transform: uppercase;
 }
-table td {
+table.orders td {
 	padding: 5px;
 	padding-left: 20px;
 }
-table th {
+table.orders th {
 	padding: 5px;
 	padding-left: 20px;
 	border-bottom: 3px solid #aeaeae;	
+}
+table.orders tr:hover {
+	background-color: rgba(0,0,0,0.05);
 }
