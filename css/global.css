@@ -2,6 +2,10 @@ h1, h2, h3, h4 {
 	font-family: 'Helvetica', 'Arial';
 }
 
+a {
+	color: black;
+}
+
 body {
 	font-family: 'Helvetica', 'Arial';
 	background-image: url(../images/flying_dutchman_2.png);
@@ -70,6 +74,9 @@ button:active {
 	border-style: inset;
 	transform: scale(0.98);
 	transition: 0ms;
+}
+button a {
+	color: inherit;
 }
 button.big {
 	font-size: 3em;
