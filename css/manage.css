@@ -99,3 +99,35 @@ table.payment th {
 table.payment tr:hover {
 	background-color: rgba(0,0,0,0.05);
 }
+
+/*** Dashboard ***/
+.dashboard li {
+	list-style: none;
+}
+.popular ul {
+	padding: 5px;
+}
+.popular li {
+	padding: 10px;	
+	background-color: rgba(0,0,0,0.05);	
+}
+.add-popular {
+	float: left;
+	padding: 10px;
+	background: #54db30;
+}
+#popular-section {
+	float: left;
+	width: 33%;
+}
+#button-section {
+	float: left;
+	width: 33%;	
+}
+#cart-section {
+	float: left;
+	width: 33%;
+}
+#cart {
+	background-color: rgba(0,0,0,0.05);	
+}
