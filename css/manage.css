@@ -18,6 +18,9 @@
 	top: 5px;
 	left: 5px;
 }
+#UsersText {
+	font-size: 2em;
+}
 
 /*** Statistics ***/
 #beer-section {
