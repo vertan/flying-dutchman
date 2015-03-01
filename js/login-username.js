@@ -13,6 +13,7 @@ function login(response) {
 		sessionStorage.setItem("userID",    response.payload[0].user_id);
 		sessionStorage.setItem("firstName", response.payload[0].first_name);
 		sessionStorage.setItem("lastName",  response.payload[0].last_name);
+		sessionStorage.setItem("credit",  response.payload[0].assets);
 		location.assign(isAdmin ? "admin.html" : "main.html");
 	} else if (response.type == "error") {
 		var errorMsg = response.payload[0].msg;
