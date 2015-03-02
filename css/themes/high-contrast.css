@@ -1,0 +1,17 @@
+body {
+	font-size: 1.25em;
+	background: black;
+	color: yellow;
+}
+button {
+	background: white;
+	color: black;
+	border: gray 6px solid;
+}
+button:active {
+	background: lightGray;
+}
+#favorites button img {
+	border: gray 2px solid;
+	background: lightGray;
+}
