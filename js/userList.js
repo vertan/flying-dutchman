@@ -14,7 +14,7 @@ function userList(response) {
 	} else if (response.type == "error") {
 		var errorMsg = response.payload[0].msg;
 		alert("Error:\n" + errorMsg);
-		location.reload();
+		location.assign("index.html");
 	}
 }
 
@@ -26,4 +26,4 @@ function init() {
 	db.request("iou_get_all", userList);
 }
 
-window.addEventListener("load", init, false);
+window.addEventListener("DOMContentLoaded", init, false);
