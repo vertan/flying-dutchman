@@ -50,5 +50,5 @@ function init() {
 	document.getElementById("adminLoginButton").addEventListener("click", initAdminLogin, false);
 }
 
-window.addEventListener("load", init, false);
+window.addEventListener("DOMContentLoaded", init, false);
 

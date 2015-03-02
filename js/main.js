@@ -6,4 +6,4 @@ function init() {
 	document.getElementById("credit").innerHTML = S("credit", credit + " kr");
 }
 
-window.addEventListener("load", init, false);
+window.addEventListener("DOMContentLoaded", init, false);
