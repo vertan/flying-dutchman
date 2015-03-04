@@ -4,7 +4,9 @@
 		<title>The Flying Dutchman</title>
 		<link rel="stylesheet" href="css/global.css" type="text/css">
 		<link rel="stylesheet" href="css/manage.css" type="text/css">
-		
+	   
+	   <script src="https://code.jquery.com/jquery-1.7.2.min.js" type="text/javascript"></script>
+	   <script src="js/pay-history.js" type="text/javascript"></script>
 	</head>
 	<body>
 	    <a href="admin.html"><button id="back">Back</button></a>
@@ -17,11 +19,13 @@
 					<table class="payment">
 						<thead>
 							<tr>
-								<th>Transaction ID</th>
-								<th>Article</th>
+							
+								<th>Timestamp</th>
+								<th>Admin_ID</th>
+								<th>Admin_username</th>
+								<th>User_First_name</th>
+								<th>User_Last_name</th>
 								<th>Amount</th>
-								<th>Payment amount</th>
-								<th>User</th>
 							</tr>
 						</thead>
 						<tbody id="payments">
