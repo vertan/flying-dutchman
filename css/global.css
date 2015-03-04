@@ -23,11 +23,10 @@ body {
 }
 #navbar .icon {
 	display: inline-block;
-	width: 1em;
-	height: 1em;
+	width: 2em;
+	height: 2em;
 	vertical-align: middle;
 	background-size: contain;
-	font-size: 2em;
 }
 #navbar #nav-up .icon {
 	background-image: url("../images/up.svg");
@@ -37,6 +36,14 @@ body {
 }
 #navbar #nav-redo .icon {
 	background-image: url("../images/redo.svg");
+}
+#navbar :disabled .icon {
+	opacity: 0.5;
+}
+
+.link-button {
+	color: inherit;
+	text-decoration: none;
 }
 
 #container {
@@ -70,11 +77,15 @@ button {
 	font-size: 1em;
 	transition: 50ms;
 }
-button:active {
+button:active:not(:disabled) {
 	background: rgba(0, 0, 0, 0.1);
 	border-style: inset;
 	transform: scale(0.98);
 	transition: 0ms;
+}
+:disabled {
+	color: gray;
+	cursor: not-allowed;
 }
 button a {
 	color: inherit;

@@ -6,23 +6,29 @@
 		<link rel="stylesheet" href="css/global.css" type="text/css">
 		<link rel="stylesheet" href="css/user_management.css" type="text/css">
 		<script src="js/db.js" type="text/javascript"></script>
+		<script src="js/navigation.js" type="text/javascript"></script>
 		<script src="js/i18n.js" type="text/javascript"></script>
 		<script src="js/theme.js" type="text/javascript"></script>
 	</head>
 	<body>
 		<div id="navbar">
-			<button id="nav-up">
-				<div class="icon"></div>
-				Up
-			</button>
-			<button id="nav-undo">
-				<div class="icon"></div>
-				Undo
-			</button>
-			<button id="nav-redo">
-				<div class="icon"></div>
-				Redo
-			</button>
+			<a href="manageusers.html" class="link-button">
+				<button id="nav-up">
+					<div class="icon"></div>
+					<span id="user-management-header" class="i18n">User management</span>
+				</button>
+			</a>
+		</div>
+		
+		<div id="top-right">
+			<span id="user"></span>
+			<br>
+			<label for="theme-menu" class="i18n" id="theme-label">Theme:</label>
+			<select id="theme-menu"></select>
+			<hr>
+			<a href="index.html" class="link-button">
+				<button id="logout-button" class="i18n">Log out</button>
+			</a>
 		</div>
 		
 		<header>
