@@ -40,15 +40,12 @@
 			<div id="contents">
 				<form id="user-select" method="GET" action="manage user.html">
 					<label id="user-label" for="List" class="i18n">User:</label>
-					<select id="List"></select>
-					<a href="manage user.html" class="link-button" accesskey="m">
-						<button id="ManageButton" type="submit" class="i18n">Manage</button>
-					</a>
-					<br>
-					<a href="add user.html" class="link-button" accesskey="a">
-						<button id="AdduserButton" type="button" class="i18n">Add new user</button>
-					</a>
-				</div>
+					<select id="user-list"></select>
+					<button id="manage-button" type="submit" class="i18n" accesskey="m" disabled="disabled">Manage</button>
+				</form>
+				<a href="add user.html" class="link-button" accesskey="a">
+					<button id="add-user-button" type="button" class="i18n">Add new user</button>
+				</a>
 			</div>
 		</div>
 	</body>

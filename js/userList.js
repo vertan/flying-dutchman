@@ -1,16 +1,35 @@
 var db;
 var userListElement;
 
+function manageUser(e) {
+	var managedUser = document.getElementById("user-list").selectedOptions[0].value;
+	sessionStorage.setItem("managedUser", managedUser);
+}
+
 function userList(response) {
 	if (response.type == "iou_get_all") {
-		var list = document.getElementById("List");
-		for(var i = 0; i<response.payload.length; i++) {
-			var user = response.payload[i];
+		document.getElementById("user-select").addEventListener("submit", manageUser, false);
+		document.getElementById("manage-button").disabled = false;
+		var list = document.getElementById("user-list");
+		var users = response.payload;
+		users.sort(function(a, b) {
+			var nameA = a.first_name + " " + a.last_name + " " + a.username;
+			var nameB = b.first_name + " " + b.last_name + " " + b.username;
+			if (nameA < nameB) return -1;
+			if (nameA > nameB) return  1;
+			else               return  0;
+		});
+		for (var i = 0; i < users.length; i++) {
+			var user = users[i];
 			var option = document.createElement("option");
 			option.value = user.username;
-			option.innerHTML = user.first_name + " " + user.last_name + " (" + user.username + ")";
+			option.innerHTML =
+				"<span class='first-name'>" + user.first_name +  "</span> " +
+				"<span class='last-name'>"  + user.last_name  +  "</span> " +
+				"<span class='user-name'>(" + user.username   + ")</span>";
 			list.appendChild(option);
 		}
+		console.log(users);
 	} else if (response.type == "error") {
 		var errorMsg = response.payload[0].msg;
 		alert("Error:\n" + errorMsg);
