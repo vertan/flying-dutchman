@@ -1,0 +1,9 @@
+{
+  "login": {
+	"title": "Den Flygande Holländaren"
+    "username": "Användarnamn",
+    "password": "Lösenord",
+    "login": "Login",
+	"managerLogin": "Manager login"
+  }
+}

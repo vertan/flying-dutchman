@@ -1,0 +1,9 @@
+{
+  "login": {
+	"title": "The Flying Dutchman",
+    "username": "Username",
+    "password": "Password",
+    "login": "Login",
+	"managerLogin": "Manager login"
+  }
+}
