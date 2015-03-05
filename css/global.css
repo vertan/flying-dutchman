@@ -96,4 +96,7 @@ button.big {
 	background: gray;
 	vertical-align: middle;
 }
-
+#top-right #theme-menu {
+	font-size: 1em;
+	max-width: 6em;
+}

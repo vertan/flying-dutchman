@@ -30,5 +30,5 @@ function init() {
 	document.getElementById("sideArea").addEventListener("submit", login, false);
 }
 
-window.addEventListener("load", init, false);
+window.addEventListener("DOMContentLoaded", init, false);
 

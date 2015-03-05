@@ -6,4 +6,23 @@ function init() {
 	document.getElementById("credit").innerHTML = S("credit", credit + " kr");
 }
 
-window.addEventListener("load", init, false);
+$(function() {
+	$('#cart').droppable({
+		tolerance: 'pointer',
+		drag: function(event, ui) {
+			
+		}
+	});
+	$('#favorites button').draggable({
+		cancel: false,
+		helper: "clone",
+		revert: true,
+		drag: function(event, ui) {
+			console.log(event);
+			console.log(ui);
+			$(ui.helper).addClass("nicer");
+		}
+	});
+});
+
+window.addEventListener("DOMContentLoaded", init, false);

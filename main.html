@@ -5,8 +5,11 @@
 		<title>The Flying Dutchman</title>
 		<link rel="stylesheet" href="css/global.css" type="text/css">
 		<link rel="stylesheet" href="css/main.css" type="text/css">
+		<script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+		<script src="http://code.jquery.com/ui/1.11.3/jquery-ui.js"></script>
 		<script src="js/db.js" type="text/javascript"></script>
 		<script src="js/i18n.js" type="text/javascript"></script>
+		<script src="js/theme.js" type="text/javascript"></script>
 		<script src="js/main.js" type="text/javascript"></script>
 	</head>
 	<body>
@@ -35,6 +38,9 @@
 				<hr>
 				<span id="credit"></span>
 				<br>
+				<label for="theme-menu" class="i18n" id="theme-label">Theme:</label>
+				<select id="theme-menu"></select>
+				<hr>
 				<button id="account-button">Account</button>
 			</div>
 			
@@ -68,6 +74,8 @@
 						</button>
 					</div>
 					<button id="berverages-button" accesskey="a">View all beverages</button>
+				</div>
+				<div id="cart">
 				</div>
 			</div>
 			

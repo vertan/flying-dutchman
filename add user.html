@@ -6,6 +6,8 @@
 		<link rel="stylesheet" href="css/global.css" type="text/css">
 		<link rel="stylesheet" href="css/user_management.css" type="text/css">
 		<script src="js/db.js" type="text/javascript"></script>
+		<script src="js/i18n.js" type="text/javascript"></script>
+		<script src="js/theme.js" type="text/javascript"></script>
 	</head>
 	<body>
 		<div id="navbar">
@@ -27,7 +29,7 @@
 			<h1>Add user</h1>
 		</header>
 		
-		<div id="newUserBox">
+		<form id="newUserBox" action="#" method="GET">
 			<table id="newUserDetails">
 				<tbody>
 					<tr>
@@ -55,8 +57,8 @@
 						<td><input type="text" id="password" value=""></td>
 					</tr>
 				</tbody>
-			</table>	
-		</div>
-		<button id="addNew">Add</button>
+			</table>
+			<button id="addNew" type="submit">Add</button>
+		</form>
 	</body>
 </html>
