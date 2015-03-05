@@ -1,4 +1,4 @@
-DEFAULT_DB_URL = "http://pub.jamaica-inn.net/fpdb/api.php";
+var DEFAULT_DB_URL = "http://pub.jamaica-inn.net/fpdb/api.php";
 
 function Database(username, password, url) {
 	this.username = username;
