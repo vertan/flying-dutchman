@@ -1,62 +1,35 @@
-body {
-	background-image: url(../images/flying_dutchman_2.png);
-	background-size: cover;
+#container > * {
 	text-align: left;
 }
-header {
-    font-size: 1.6em;
-	font-family: serif;
-    font-variant: small-caps;
+
+table,
+table input {
+	font-size: 1.5em;
+}
+table {
+	display: inline-block;
+	margin: 2em;
+	vertical-align: top;
+}
+thead th {
+	padding-bottom: 1em;
 	text-align: center;
 }
-#back {
-	position: float;
-	top: 5px;
-	left: 5px;
+th > label {
+	font-weight: normal;
+	display: block;
 }
-p {
+.button-row td {
+	padding: 0.5em;
 	text-align: center;
 }
-#userBox {
-	position: absolute;
-	left: 250px;
+.button-row button {
+	width: 90%;
+	padding: 0.2em;
 }
-#edit {
-	position: absolute;
-	top: 300px;
-	left: 400px;
+#user-details-box input {
+	width: 8em;
 }
-#creditBox {
-	text-align: left;
-	position: absolute;
-	right: 250px;
-}
-#add {
-	position: absolute;
-	top: 300px;
-	right: 400px;
-}
-#newUserBox {
-	position: absolute;
-	left: 400px;
-	text-align: center;
-}
-#newUserDetails {
-	text-align: left;
-}
-button {
-	border: gray outset 2px;
-	border-radius: .2em;
-	background: rgba(0, 0, 0, 0.05);
-	color: black;
-	cursor: pointer;
-	margin: 0.05em;
-	font-size: 1em;
-	transition: 50ms;
-}
-button:active {
-	background: rgba(0, 0, 0, 0.1);
-	border-style: inset;
-	transform: scale(0.98);
-	transition: 0ms;
+#add-credit-box input {
+	width: 4em;
 }

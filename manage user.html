@@ -9,6 +9,7 @@
 		<script src="js/navigation.js" type="text/javascript"></script>
 		<script src="js/i18n.js" type="text/javascript"></script>
 		<script src="js/theme.js" type="text/javascript"></script>
+		<script src="js/edituser.js" type="text/javascript"></script>
 	</head>
 	<body>
 		<div id="navbar">
@@ -31,51 +32,77 @@
 			</a>
 		</div>
 		
-		<header>
-			<h1>Manage user</h1>
-		</header>
-		
-		<p>FirstName LastName</p>
-		<div id="userBox">
-			<table id="userDetails">
-				<tbody>
-					<tr>
-						<td>First name</td>
-						<td><input type="text" id="firstName" value=""></td>
-					</tr>
-					<tr>
-						<td>Last name</td>
-						<td><input type="text" id="lastName" value=""></td>
-					</tr>
-					<tr>
-						<td>Telephone number</td>
-						<td><input type="text" id="teleNo" value=""></td>
-					</tr>
-					<tr>
-						<td>e-mail address</td>
-						<td><input type="text" id="eMail" value=""></td>
-					</tr>
-					<tr>
-						<td>New password</td>
-						<td><input type="text" id="newPassword" value=""></td>
-					</tr>
-				</tbody>
-			</table>	
-		</div>
-		<button id="edit">Edit</button>
-		<div id="creditBox">
-			<table>
-				<tbody>
-					<tr>
-						<td>Current credit: </td><td>0 SEK</td>
-					</tr>
-					<tr>
-						<td>Credit to add: </td>
-						<td><input type="text" id="addCredit" value=""></td>
-					</tr>
-				</tbody>
-			</table>
-		</div>
-		<button id="add">Add</button>
+		<div id="content">
+			<header>
+				<h1>Manage user</h1>
+				<h2 id="user-header">…</h2>
+			</header>
+
+			<div id="container">
+				<table id="user-details-box">
+					<thead>
+						<tr>
+							<th id="edit-user-details-header" class="i18n" colspan="2">Edit user details</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<th><label id="first-name-label" class="i18n" for="first-name-field">First name</label></th>
+							<td><input type="text" id="first-name-field"></td>
+						</tr>
+						<tr>
+							<th><label id="last-name-label" class="i18n" for="last-name-field">Last name</label></th>
+							<td><input type="text" id="last-name-field"></td>
+						</tr>
+						<tr>
+							<th><label id="tel-label" class="i18n" for="tel-field">Telephone number</label></th>
+							<td><input type="tel" id="tel-field"></td>
+						</tr>
+						<tr>
+							<th><label id="email-label" class="i18n" for="email-field">E-mail address</label></th>
+							<td><input type="email" id="email-field"></td>
+						</tr>
+						<tr>
+							<th><label id="password-label" class="i18n" for="password-field-1">New password</label></th>
+							<td><input type="password" id="password-field-1"></td>
+						</tr>
+						<tr>
+							<th><label id="password-confirm-label" class="i18n" for="password-field-2">New password (confirm)</label></th>
+							<td><input type="password" id="password-field-2"></td>
+						</tr>
+						<tr class="button-row">
+							<td colspan="2">
+								<button id="update-user-button" class="i18n">Update</button>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+				<table id="add-credit-box">
+					<thead>
+						<tr>
+							<th id="add-credit-header" class="i18n" colspan="2">Add credit</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<th><label id="current-credit-label" class="i18n" for="current-credit-amount">Current credit:</label></th>
+							<td><input type="number" id="current-credit-amount" readonly="readonly"> SEK</td>
+						</tr>
+						<tr>
+							<th><label id="credit-to-add-label" class="i18n" for="credit-add-amount">Credit to add:</label></th>
+							<td><input type="number" id="credit-add-amount" value="0" min="0"> SEK</td>
+						</tr>
+						<tr>
+							<th><label id="new-credit-label" class="i18n" for="new-credit-amount">New credit:</label></th>
+							<td><input type="number" id="new-credit-amount"> SEK</td>
+						</tr>
+						<tr class="button-row">
+							<td colspan="2">
+								<button id="add-credit-button" class="i18n">Add credit</button>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
 	</body>
 </html>

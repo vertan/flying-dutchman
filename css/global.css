@@ -47,7 +47,6 @@ body {
 }
 
 #container {
-	width: 1024px;
 	margin: 0px auto;
 }
 
@@ -60,6 +59,8 @@ header {
 input[type="text"],
 input[type="password"],
 input[type="number"],
+input[type="tel"],
+input[type="email"],
 textarea {
 	border: gray inset 2px;
 	border-radius: .2em;
