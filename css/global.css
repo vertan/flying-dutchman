@@ -11,6 +11,7 @@ body {
 	font-family: 'Helvetica', 'Arial';
 	background-image: url(../images/flying_dutchman_2.png);
 	background-size: cover;
+	background-attachment: fixed;
 	color: black;
 	text-align: center;
 }
