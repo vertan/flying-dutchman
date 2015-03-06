@@ -1,0 +1,28 @@
+/*** Orders ***/
+table.orders {
+	width: 100%;
+	border-spacing: 0px;
+}
+table.orders thead {
+	text-align: left;
+	padding-left: 20px;
+    text-transform: uppercase;
+}
+table.orders td {
+	padding: 5px;
+	padding-left: 20px;
+}
+table.orders th {
+	padding: 5px;
+	padding-left: 20px;
+	border-bottom: 3px solid #aeaeae;	
+}
+table.orders tbody tr:hover {
+	background-color: rgba(0,0,0,0.05);
+}
+
+#updateButton {
+	position: fixed;
+	bottom: 1em;
+	font-size: 2em;
+}
