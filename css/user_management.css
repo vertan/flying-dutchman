@@ -2,6 +2,10 @@
 	text-align: left;
 }
 
+form {
+	display: inline-block;
+}
+
 table,
 table input {
 	font-size: 1.5em;

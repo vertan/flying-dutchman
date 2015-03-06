@@ -39,70 +39,74 @@
 			</header>
 
 			<div id="container">
-				<table id="user-details-box">
-					<thead>
-						<tr>
-							<th id="edit-user-details-header" class="i18n" colspan="2">Edit user details</th>
-						</tr>
-					</thead>
-					<tbody>
-						<tr>
-							<th><label id="first-name-label" class="i18n" for="first-name-field">First name</label></th>
-							<td><input type="text" id="first-name-field"></td>
-						</tr>
-						<tr>
-							<th><label id="last-name-label" class="i18n" for="last-name-field">Last name</label></th>
-							<td><input type="text" id="last-name-field"></td>
-						</tr>
-						<tr>
-							<th><label id="tel-label" class="i18n" for="tel-field">Telephone number</label></th>
-							<td><input type="tel" id="tel-field"></td>
-						</tr>
-						<tr>
-							<th><label id="email-label" class="i18n" for="email-field">E-mail address</label></th>
-							<td><input type="email" id="email-field"></td>
-						</tr>
-						<tr>
-							<th><label id="password-label" class="i18n" for="password-field-1">New password</label></th>
-							<td><input type="password" id="password-field-1"></td>
-						</tr>
-						<tr>
-							<th><label id="password-confirm-label" class="i18n" for="password-field-2">New password (confirm)</label></th>
-							<td><input type="password" id="password-field-2"></td>
-						</tr>
-						<tr class="button-row">
-							<td colspan="2">
-								<button id="update-user-button" class="i18n">Update</button>
-							</td>
-						</tr>
-					</tbody>
-				</table>
-				<table id="add-credit-box">
-					<thead>
-						<tr>
-							<th id="add-credit-header" class="i18n" colspan="2">Add credit</th>
-						</tr>
-					</thead>
-					<tbody>
-						<tr>
-							<th><label id="current-credit-label" class="i18n" for="current-credit-amount">Current credit:</label></th>
-							<td><input type="number" id="current-credit-amount" readonly="readonly"> SEK</td>
-						</tr>
-						<tr>
-							<th><label id="credit-to-add-label" class="i18n" for="credit-add-amount">Credit to add:</label></th>
-							<td><input type="number" id="credit-add-amount" value="0" min="0"> SEK</td>
-						</tr>
-						<tr>
-							<th><label id="new-credit-label" class="i18n" for="new-credit-amount">New credit:</label></th>
-							<td><input type="number" id="new-credit-amount"> SEK</td>
-						</tr>
-						<tr class="button-row">
-							<td colspan="2">
-								<button id="add-credit-button" class="i18n">Add credit</button>
-							</td>
-						</tr>
-					</tbody>
-				</table>
+				<form id="user-details-form" method="GET" action="#">
+					<table id="user-details-box">
+						<thead>
+							<tr>
+								<th id="edit-user-details-header" class="i18n" colspan="2">Edit user details</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<th><label id="first-name-label" class="i18n" for="first-name-field">First name</label></th>
+								<td><input type="text" id="first-name-field" required="required"></td>
+							</tr>
+							<tr>
+								<th><label id="last-name-label" class="i18n" for="last-name-field">Last name</label></th>
+								<td><input type="text" id="last-name-field" required="required"></td>
+							</tr>
+							<tr>
+								<th><label id="tel-label" class="i18n" for="tel-field">Telephone number</label></th>
+								<td><input type="tel" id="tel-field" required="required"></td>
+							</tr>
+							<tr>
+								<th><label id="email-label" class="i18n" for="email-field">E-mail address</label></th>
+								<td><input type="email" id="email-field" required="required"></td>
+							</tr>
+							<tr>
+								<th><label id="password-label" class="i18n" for="password-field-1">New password</label></th>
+								<td><input type="password" id="password-field-1" required="required"></td>
+							</tr>
+							<tr>
+								<th><label id="password-confirm-label" class="i18n" for="password-field-2">New password (confirm)</label></th>
+								<td><input type="password" id="password-field-2" required="required"></td>
+							</tr>
+							<tr class="button-row">
+								<td colspan="2">
+									<button id="update-user-button" class="i18n">Update</button>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</form>
+				<form id="add-credit-form" method="GET" action="#">
+					<table id="add-credit-box">
+						<thead>
+							<tr>
+								<th id="add-credit-header" class="i18n" colspan="2">Add credit</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<th><label id="current-credit-label" class="i18n" for="current-credit-amount">Current credit:</label></th>
+								<td><input type="number" id="current-credit-amount" readonly="readonly"> SEK</td>
+							</tr>
+							<tr>
+								<th><label id="credit-to-add-label" class="i18n" for="credit-add-amount">Credit to add:</label></th>
+								<td><input type="number" id="credit-add-amount" value="0" min="0" required="required"> SEK</td>
+							</tr>
+							<tr>
+								<th><label id="new-credit-label" class="i18n" for="new-credit-amount">New credit:</label></th>
+								<td><input type="number" id="new-credit-amount" required="required"> SEK</td>
+							</tr>
+							<tr class="button-row">
+								<td colspan="2">
+									<button id="add-credit-button" class="i18n">Add credit</button>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</form>
 			</div>
 	</body>
 </html>

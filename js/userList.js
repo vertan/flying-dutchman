@@ -33,7 +33,7 @@ function userList(response) {
 	} else if (response.type == "error") {
 		var errorMsg = response.payload[0].msg;
 		alert("Error:\n" + errorMsg);
-		location.reload();
+		location.assign("index.html");
 	}
 }
 
