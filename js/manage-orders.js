@@ -1,8 +1,9 @@
+// This function sorts the count (how many beers are left in stock) and then lists them if the count is below 30 beers. 
 function listInventory(result) {
 	result.payload.sort(function(a, b) {
 		if (a.count-0 < b.count-0) return -1;
 		if (a.count-0 > b.count-0) return  1;
-		else                   return  0;
+		else                       return  0;
 		});
 	for (var i = 0; i < result.payload.length; i++) {
 		var row = document.createElement("tr");
@@ -20,6 +21,7 @@ function listInventory(result) {
 	}
 }
 
+// This function just checks so that you are logged in. If you are not, the user's name will be null, null.
 function initOrderList() {
 	var username = sessionStorage.getItem("username");
 	var password = sessionStorage.getItem("password");
