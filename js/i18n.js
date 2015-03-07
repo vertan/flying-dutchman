@@ -20,7 +20,12 @@ function init() {
 }
 
 function getWord(dictionary, wordID) {
-	return dictionary[wordID];
+	var result = dictionary[wordID];
+	if (result != undefined) {
+		return result;
+	} else {
+		return "[i18n error] String not found!";
+	}
 }
 
 function setLang(lang) {
