@@ -1,4 +1,5 @@
 {
-	"all-beverages": "List all beverages",
-	"account": "Account"
+	"all_beverages": "List all beverages",
+	"account": "Account",
+	"theme": "Theme"
 }
