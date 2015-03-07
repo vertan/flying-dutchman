@@ -14,7 +14,7 @@ function login(response) {
 		sessionStorage.setItem("firstName", response.payload[0].first_name);
 		sessionStorage.setItem("lastName",  response.payload[0].last_name);
 		sessionStorage.setItem("credit",  response.payload[0].assets);
-		sessionStorage.setItem("lang", "sv");
+		sessionStorage.setItem("lang", "en");
 		location.assign(isAdmin ? "admin-menu.html" : "main.html");
 	} else if (response.type == "error") {
 		var errorMsg = response.payload[0].msg;
