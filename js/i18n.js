@@ -5,7 +5,62 @@
  * TODO: Plurals.
  */
 
-// Dummy function:
+function init() {
+	var userLang = getLang();
+	var langObj = getLangObject(userLang).then(function(response){
+		var dict = response;
+		$("body").children().each(function() {
+			$(this).html($(this).html().replace(/%(\w+)%/g, function(match, $1) {
+                return getWord(dict, $1);
+			}));
+		});
+	}, function(error) {
+		console.log(error);
+	});
+}
+
+function getWord(dictionary, wordID) {
+	return dictionary[wordID];
+}
+
+function setLang(lang) {
+	console.log("New lang: " + lang);
+	sessionStorage.setItem("lang", lang);
+}
+
+function getLang() {
+	return sessionStorage.getItem("lang");
+}
+
+function getLangObject(lang) {
+	return new Promise(function(resolve, reject) {	
+		var contents = getFile(lang).then(function(response) {
+			var parsed = JSON.parse(response);
+			resolve(parsed);
+		}, function(error) {
+			reject(Error("Error in getLangObject!"));
+		});
+	});
+}
+
+function getFile(lang) {
+	return new Promise(function(resolve, reject) {
+		var fileContent = null;
+		var req = new XMLHttpRequest();
+		var url = window.location.href;
+		url = url.substring(0, url.lastIndexOf('/') + 1);
+		url = url + "lang/" + lang + ".json"
+		req.open("GET", url, true);
+		req.onreadystatechange = function () {
+			if(req.readyState === 4) {
+				fileContent = req.responseText;
+				resolve(fileContent);
+			}
+		}
+		req.send();
+	});
+}
+
 function S(id) {
 	var string = id;
 	if (arguments.length > 1) {
@@ -20,3 +75,5 @@ function S(id) {
 	}
 	return string;
 }
+
+window.addEventListener("DOMContentLoaded", init, false);
