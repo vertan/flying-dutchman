@@ -5,6 +5,7 @@
 		<title>The Flying Dutchman</title>
 		<link rel="stylesheet" href="css/global.css" type="text/css">
 		<link rel="stylesheet" href="css/main.css" type="text/css">
+		<link rel="stylesheet" href="css/order_style.css" type="text/css">
 		<script src="http://code.jquery.com/jquery-1.10.2.js"></script>
 		<script src="http://code.jquery.com/ui/1.11.3/jquery-ui.js"></script>
 		<script src="js/db.js" type="text/javascript"></script>
@@ -48,6 +49,54 @@
 				</a>
 			</div>
 			
+			<div id="container2">
+			<header>
+				<h1>Cart</h1>
+			</header>
+			
+			<table id="table_order">
+				<thead>
+					<tr>
+						<td>Beer</td>   	<!-- First child -->
+						<td>&nbsp;</td> 	<!-- Second child-->
+						<td>Quantity</td>    <!-- Third child -->
+						<td>&nbsp;</td> 	<!-- Fourth child -->
+						<td>Price</td>  	<!-- Fifth child -->
+						<td>&nbsp;</td> 	<!-- Last child-->
+					</tr>
+				</thead>
+				<tfoot>
+					<td colspan="1">Total:</td>
+					<td colspan="4">50</td>
+					<td>&nbsp;</td>
+				</tfoot>
+				<tbody>
+					<tr id="1">
+						<td>Norrlands Guld</td>
+						<td><button onclick="changeContent('-1', this);" value="">-</button></td>
+						<td>2</td>
+						<td><button onclick="changeContent('1', this);" value="">+</button></td>
+						<td>25 SEK</td>
+						<td><button onclick="changeContent('0', this);" value="">X</button></td>
+					</tr>
+					<tr id="2">
+						<td>Mariestad</td>
+						<td><button onclick="changeContent('-1', this);" value="">-</button></td>
+						<td>1</td>
+						<td><button onclick="changeContent('1', this);" value="">+</button></td>
+						<td>25 SEK</td>
+						<td><button onclick="changeContent('0', this);" value="">X</button></td>
+					</tr>
+				</tbody>
+
+			</table>
+			</div>
+			<div id="buttons">
+				<button class="btn" id="cancel">Cancel</button>
+				<button class="btn" id="buy">Buy</button>
+				<button class="btn" id="add">Add</button>
+			</div>
+		
 			<div id="content" class="content-loggedin">
 				<div id="beerlist">
 					<h2>Quick-add favorites</h2>
@@ -84,7 +133,7 @@
 				<div id="cart">
 				</div>
 			</div>
-			
+						
 			<footer>
 				<!-- Short information and sitemap -->
 			</footer>
