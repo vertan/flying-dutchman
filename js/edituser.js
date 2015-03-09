@@ -4,6 +4,8 @@ var db = new Database(username, password);
 
 var managedUser = sessionStorage.getItem("managedUser");
 
+var creditAddedAnimationInterval;
+
 function fillUserData(response) {
 	var users = response.payload;
 	for (var i = 0; i < users.length; i++) {
@@ -15,6 +17,7 @@ function fillUserData(response) {
 			document.getElementById("last-name-field"      ).value = user.last_name;
 			document.getElementById("current-credit-amount").value = user.assets;
 			document.getElementById("new-credit-amount"    ).value = user.assets;
+			document.getElementById("credit-add-amount"    ).value = 0;
 			document.getElementById("new-credit-amount"    ).min   = user.assets;
 			break;
 		}
@@ -46,7 +49,7 @@ function updateUser(e) {
 	e.preventDefault();
 	if (document.getElementById("password-field-1").value != document.getElementById("password-field-2").value) {
 		alert("Passwords do not match");
-		return
+		return;
 	}
 	db.request(
 		"user_edit" +
@@ -59,13 +62,54 @@ function updateUser(e) {
 		userUpdated);
 }
 
+function creditAddedAnimation(startTime, addAmount, newCredit) {
+	var now = new Date();
+	var addedAmount = Math.ceil(addAmount * (now - startTime) / 333);
+	if (addedAmount >= addAmount) {
+		clearInterval(creditAddedAnimationInterval);
+		addedAmount = addAmount;
+		db.request("iou_get_all", fillUserData);
+	}
+	document.getElementById("current-credit-amount").value = newCredit - (addAmount - addedAmount);
+	document.getElementById("credit-add-amount"    ).value = addAmount - addedAmount;
+	updateNewCredit();
+}
+
+function creditAdded(response) {
+	if (response.type == "empty") {
+		clearInterval(creditAddedAnimationInterval);
+		var addAmount = document.getElementById("credit-add-amount").value;
+		var newCredit = document.getElementById("new-credit-amount").value;
+		creditAddedAnimationInterval = setInterval(creditAddedAnimation, 20, new Date(), addAmount, newCredit);
+	} else if (response.type == "error") {
+		alert("Failed to add credit:\n" + response.payload[0].msg);
+	}
+}
+
+function enterUserID(response) {
+	var users = response.payload;
+	for (var i = 0; i < users.length; i++) {
+		var user = users[i];
+		if (user.username == managedUser) {
+			document.getElementById("user-id").value    = user.user_id;
+			document.getElementById("user-id").readOnly = true;
+			break;
+		}
+	}
+}
+
 function addCredit(e) {
 	e.preventDefault();
-	alert("tbi.");
+	db.request(
+		"payments_append" +
+			"&user_id=" + encodeURIComponent(document.getElementById("user-id"          ).value) +
+			"&amount="  + encodeURIComponent(document.getElementById("credit-add-amount").value),
+		creditAdded);
 }
 
 function initEditUser() {
-	db.request("iou_get_all", fillUserData);
+	db.request("iou_get_all",       fillUserData);
+	db.request("purchases_get_all", enterUserID);
 	
 	document.getElementById("user-details-form").addEventListener("submit", updateUser,       false);
 	document.getElementById("add-credit-form"  ).addEventListener("submit", addCredit,        false);
