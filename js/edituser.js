@@ -2,10 +2,13 @@ var username = sessionStorage.getItem("username");
 var password = sessionStorage.getItem("password");
 var db = new Database(username, password);
 
+// Check which user we are editing
 var managedUser = sessionStorage.getItem("managedUser");
 
+// Used to store the ID for the timer, in case we need to abort it
 var creditAddedAnimationInterval;
 
+// Checks an iou_get_all request and fills in the data about the user being edited
 function fillUserData(response) {
 	var users = response.payload;
 	for (var i = 0; i < users.length; i++) {
@@ -24,19 +27,21 @@ function fillUserData(response) {
 	}
 }
 
+// This and the following function are triggered when the "Credit to
+// add" or "New credit" fields are changed, and keeps them in sync
 function updateNewCredit() {
 	document.getElementById("new-credit-amount").value =
 		document.getElementById("current-credit-amount").value - 0 + (
 		document.getElementById("credit-add-amount").value - 0);
 	// The zeros are subtracted to force String -> Number type casting.
 }
-
 function updateCreditToAdd() {
 	document.getElementById("credit-add-amount").value =
 		document.getElementById("new-credit-amount").value -
 		document.getElementById("current-credit-amount").value
 }
 
+// Called when server has replied to the user_edit request
 function userUpdated(response) {
 	if (response.type == "edit_user") {
 		location.reload(true);
@@ -44,7 +49,6 @@ function userUpdated(response) {
 		alert("Failed to edit user:\n" + response.payload[0].msg);
 	}
 }
-
 function updateUser(e) {
 	e.preventDefault();
 	if (document.getElementById("password-field-1").value != document.getElementById("password-field-2").value) {
@@ -62,21 +66,41 @@ function updateUser(e) {
 		userUpdated);
 }
 
+// Gradually transfers money from the "Credit to add" field to the "Current credit" field
 function creditAddedAnimation(startTime, addAmount, newCredit) {
+	// startTime:   The time when the animation started
+	// addAmount:   How much credit was added
+	// newCredit:   What the new credit should be
+	// addedAmount: How much credit that has currently been moved to the "Current credit" field
 	var now = new Date();
 	var addedAmount = Math.ceil(addAmount * (now - startTime) / 333);
 	if (addedAmount >= addAmount) {
 		clearInterval(creditAddedAnimationInterval);
 		addedAmount = addAmount;
-		db.request("iou_get_all", fillUserData);
+		db.request("iou_get_all", fillUserData);	// Refresh in case something has been updated behind our backs or something went wrong
 	}
 	document.getElementById("current-credit-amount").value = newCredit - (addAmount - addedAmount);
 	document.getElementById("credit-add-amount"    ).value = addAmount - addedAmount;
 	updateNewCredit();
 }
 
+// Try to figgure out the user ID by looking in the purchases log
+function enterUserID(response) {
+	var users = response.payload;
+	for (var i = 0; i < users.length; i++) {
+		var user = users[i];
+		if (user.username == managedUser) {
+			// User ID has been found so enter it and lock the edit field, since we're certain that it's correct
+			document.getElementById("user-id").value    = user.user_id;
+			document.getElementById("user-id").readOnly = true;
+			break;
+		}
+	}
+}
+
+// Called when server has responded to a payments_append request
 function creditAdded(response) {
-	if (response.type == "empty") {
+	if (response.type == "empty") {	// Empty response signals success
 		clearInterval(creditAddedAnimationInterval);
 		var addAmount = document.getElementById("credit-add-amount").value;
 		var newCredit = document.getElementById("new-credit-amount").value;
@@ -85,19 +109,6 @@ function creditAdded(response) {
 		alert("Failed to add credit:\n" + response.payload[0].msg);
 	}
 }
-
-function enterUserID(response) {
-	var users = response.payload;
-	for (var i = 0; i < users.length; i++) {
-		var user = users[i];
-		if (user.username == managedUser) {
-			document.getElementById("user-id").value    = user.user_id;
-			document.getElementById("user-id").readOnly = true;
-			break;
-		}
-	}
-}
-
 function addCredit(e) {
 	e.preventDefault();
 	db.request(
@@ -109,7 +120,7 @@ function addCredit(e) {
 
 function initEditUser() {
 	db.request("iou_get_all",       fillUserData);
-	db.request("purchases_get_all", enterUserID);
+	db.request("purchases_get_all", enterUserID);	// To figgure out user ID
 	
 	document.getElementById("user-details-form").addEventListener("submit", updateUser,       false);
 	document.getElementById("add-credit-form"  ).addEventListener("submit", addCredit,        false);

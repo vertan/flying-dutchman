@@ -2,12 +2,15 @@ var usernameField;
 var passwordField;
 var adminLoginButton;
 
+// Determines whether to go to buy page or managers page
 var isAdmin;
 
 var db;
 
+// Clear any old login information or prefrences
 sessionStorage.clear();
 
+// Called when server replies to iou_get request
 function login(response) {
 	if (response.type == "iou_get") {
 		sessionStorage.setItem("userID",    response.payload[0].user_id);
@@ -30,7 +33,7 @@ function initLogin(e) {
 	sessionStorage.setItem("username", username);
 	sessionStorage.setItem("password", password);
 	db = new Database(username, password);
-	db.request("iou_get", login);
+	db.request("iou_get", login);	// Get user information
 }
 
 function initAdminLogin(e) {
