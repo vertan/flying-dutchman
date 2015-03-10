@@ -43,7 +43,7 @@ function updateCreditToAdd() {
 
 // Called when server has replied to the user_edit request
 function userUpdated(response) {
-	if (response.type == "edit_user") {
+	if (response.type != "error") {	// type is "User ___ updated" on success
 		location.reload(true);
 	} else if (response.type == "error") {
 		alert("Failed to edit user:\n" + response.payload[0].msg);
