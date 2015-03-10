@@ -11,12 +11,15 @@ var themes = [
 
 function setTheme(newTheme) {
 	theme = newTheme;
-	sessionStorage.setItem("theme", theme);
 	if (theme) {
+		sessionStorage.setItem("theme", theme);
 		themeLink.href = theme;
 		document.head.appendChild(themeLink);
-	} else if (document.head.contains(themeLink)) {
-		document.head.removeChild(themeLink);
+	} else {
+		sessionStorage.removeItem("theme", theme);
+		if (document.head.contains(themeLink)) {
+			document.head.removeChild(themeLink);
+		}
 	}
 }
 
