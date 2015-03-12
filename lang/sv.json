@@ -1,5 +1,29 @@
 {
 	"all_beverages": "Lista alla drycker",
 	"account": "Konto",
-	"theme": "Tema"
+	"theme": "Tema",
+
+	"user-management-header": "Användarhantering", 
+	"user-label": "Användare:",
+	"manage-button": "Hantera",
+	"add-user-button": "Lägg till ny användare",
+	
+	"manage-user-header": "Hantera användare",
+	"edit-user-header": "Redigerar användaren &ldquo;{3}&rdquo;",
+	"edit-user-details-header": "Redigera användaruppgifter",
+	"first-name-label": "Förnamn:",
+	"last-name-label": "Efternamn:",
+	"user-name-label": "Användarnamn (inloggningsnamn):",
+	"tel-label": "Telefonnummer:",
+	"email-label": "Epost-address:",
+	"password-label": "Lösenord:",
+	"password-confirm-label": "Lösenord (bekräfta):",
+	"update-user-button": "Updatera",
+	"add-credit-header": "Öka saldo",
+	"user-id-label": "Användar-ID:",
+	"current-credit-label": "Nuvarande saldo:",
+	"credit-to-add-label": "Saldo att lägga till:",
+	"initial-credit-label": "Lägg till saldo:",
+	"new-credit-label": "Ny saldo:",
+	"add-credit-button": "Updatera saldo"
 }

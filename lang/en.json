@@ -1,5 +1,29 @@
 {
 	"all_beverages": "List all beverages",
 	"account": "Account",
-	"theme": "Theme"
+	"theme": "Theme",
+
+	"user-management-header": "User Management", 
+	"user-label": "User:",
+	"manage-button": "Manage",
+	"add-user-button": "Add new user",
+	
+	"manage-user-header": "Manage user",
+	"edit-user-header": "Editing user &ldquo;{3}&rdquo;",
+	"edit-user-details-header": "Edit user details",
+	"first-name-label": "First name:",
+	"last-name-label": "Last name:",
+	"user-name-label": "Username:",
+	"tel-label": "Telephone number:",
+	"email-label": "E-mail address:",
+	"password-label": "Password:",
+	"password-confirm-label": "Password (confirm):",
+	"update-user-button": "Update",
+	"add-credit-header": "Add credit",
+	"user-id-label": "User ID:",
+	"current-credit-label": "Current credit:",
+	"credit-to-add-label": "Credit to add:",
+	"initial-credit-label": "Initial credit:",
+	"new-credit-label": "New credit:",
+	"add-credit-button": "Add credit"
 }
