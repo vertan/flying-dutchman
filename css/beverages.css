@@ -12,7 +12,13 @@
 	border: 1px inset black;
 }
 #beverage-list .name {
-	width: 20em;
+	width: 8em;
+	height: 2em;
+	text-align: left;
+	display: inline-block;
+}
+#beverage-list .name2 {
+	width: 8em;
 	height: 2em;
 	text-align: left;
 	display: inline-block;
