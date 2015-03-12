@@ -5,15 +5,28 @@
  * TODO: Plurals.
  */
 
+var userLlang;
+var dict = sessionStorage.getItem("dict");
+
 function init() {
-	var userLang = getLang();
+	userLang = getLang();
 	var langObj = getLangObject(userLang).then(function(response){
-		var dict = response;
-		$("body").children().each(function() {
-			$(this).html($(this).html().replace(/%(\w+)%/g, function(match, $1) {
-                return getWord(dict, $1);
-			}));
-		});
+		dict = response;
+		sessionStorage.setItem("dict", dict);
+		if (window.$) {
+			$("body").children().each(function() {
+				$(this).html($(this).html().replace(/%(\w+)%/g, function(match, $1) {
+					return getWord(dict, $1);
+				}));
+			});
+		} else {
+			console.warn("JQuery not loaded. Include JQuery to enable translation using the %id% syntax.");
+		}
+		var es = document.getElementsByClassName("i18n");
+		for (var i = 0; i < es.length; i++) {
+			var e = es[i];
+			e.innerHTML = S(e.id);
+		}
 	}, function(error) {
 		console.log(error);
 	});
@@ -67,6 +80,18 @@ function getFile(lang) {
 }
 
 function S(id) {
+	var string = getWord(dict, id);
+	if (string == "[i18n error] String not found!") {
+		return getDummyString(arguments);
+	}
+	for (var i = 1; i < arguments.length; i++) {
+		string = string.replace("{" + i + "}", arguments[i]);
+	}
+	return string;
+}
+
+function getDummyString(arguments) {
+	var id = arguments[0];
 	var string = id;
 	if (arguments.length > 1) {
 		string += "(";
