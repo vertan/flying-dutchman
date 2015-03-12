@@ -1,3 +1,6 @@
+var updatedItemsCount;
+var receivedItemsCount;
+
 // This function sorts the count (how many beers are left in stock) and then lists them if the count is below 30 beers. 
 function listInventory(result) {
 	result.payload.sort(function(a, b) {
@@ -16,9 +19,17 @@ function listInventory(result) {
 				"<td>" + result.payload[i].pub_price + "</td>" +
 				"<td>" + result.payload[i].price     + "</td>" +
 				"<td>" + result.payload[i].count     + "</td>" +
-				"<td> <input type='number' value='0' class='addEditField' data-beer_id='" + result.payload[i].beer_id + "'> </td>";
+				"<td> <input type='number' value='0' class='addEditField' data-beer_id='" + 
+				result.payload[i].beer_id + "' data-pub_price='" + result.payload[i].pub_price + "'> </td>";
 		}	
 		document.getElementById("manage-orders").appendChild(row);
+	}
+}
+
+function itemUpdated(response) {
+	receivedItemsCount++;
+	if (updatedItemsCount == receivedItemsCount) {
+		location.reload(true);
 	}
 }
 
@@ -30,8 +41,13 @@ function updateStocks() {
 	for (var i = 0; i < retrieveBoxAmount.length; i++) {
 		var box = retrieveBoxAmount[i];
 		if (box.value > 0) {
-			//db.request("inventory_append");
-			//which price should we remember as well as the beer id?
+			updatedItemsCount++;
+			db.request(
+			"inventory_append" +
+				"&beer_id=" + encodeURIComponent(box.dataset.beer_id) +
+				"&amount="  + encodeURIComponent(box.value) +
+				"&pub_price" + encodeURIComponent(box.dataset.pub_price),
+			itemUpdated);	// Updates the beer stock and the pub price to the database.
 		}
 	}
 }
