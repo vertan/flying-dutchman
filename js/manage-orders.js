@@ -1,5 +1,5 @@
-var updatedItemsCount;
-var receivedItemsCount;
+var updatedItemsCount = 0;
+var receivedItemsCount = 0;
 
 // This function sorts the count (how many beers are left in stock) and then lists them if the count is below 30 beers. 
 function listInventory(result) {
