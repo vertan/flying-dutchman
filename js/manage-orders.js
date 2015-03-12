@@ -20,13 +20,14 @@ function listInventory(result) {
 				"<td>" + result.payload[i].price     + "</td>" +
 				"<td>" + result.payload[i].count     + "</td>" +
 				"<td> <input type='number' value='0' class='addEditField' data-beer_id='" + 
-				result.payload[i].beer_id + "' data-pub_price='" + result.payload[i].pub_price + "'> </td>";
+				result.payload[i].beer_id + "' data-price='" + result.payload[i].price + "'> </td>";
 		}	
 		document.getElementById("manage-orders").appendChild(row);
 	}
 }
 
 function itemUpdated(response) {
+	console.log(receivedItemsCount, updatedItemsCount);
 	receivedItemsCount++;
 	if (updatedItemsCount == receivedItemsCount) {
 		location.reload(true);
@@ -46,7 +47,7 @@ function updateStocks() {
 			"inventory_append" +
 				"&beer_id=" + encodeURIComponent(box.dataset.beer_id) +
 				"&amount="  + encodeURIComponent(box.value) +
-				"&pub_price" + encodeURIComponent(box.dataset.pub_price),
+				"&price=" + encodeURIComponent(box.dataset.price),
 			itemUpdated);	// Updates the beer stock and the pub price to the database.
 		}
 	}
