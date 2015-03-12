@@ -8,7 +8,6 @@
 	font-size: 3em;
 	margin: 10px;
 	padding: 0 0px;
-	position: absolute;
 	text-align: center;
 	width: 1000px;
 }
@@ -19,27 +18,26 @@ table {
 	/* margin: 10px; */
 	padding: 0 10px;
 	width: 1004px;
+	color: rgb(0, 0, 0);
 }
 table button {
 	font-size: 1.5em;
 	min-width: 40px;
 }
 
-thead {
-	background-color: rgba(255, 255, 255, 0.6);
+thead  tr, tfoot tr{
+	background-color: rgba(255, 255, 255, 0.8);
 	font-weight: bold;
 }
-tfoot {
-	font-weight: bold;
-}
+
 tr {
 	height: 50px;
 }
 
-tr:nth-child(2n) {
+tbody tr:nth-child(2n) {
 	background-color: rgba(255,255,255,0.6);
 }
-tr:nth-child(2n+1) {
+tbody tr:nth-child(2n+1) {
 	background-color: rgba(240,240,240,0.6);
 }
 

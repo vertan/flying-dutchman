@@ -4,7 +4,7 @@ body {
 	color: yellow;
 }
 button {
-	background: white;
+	background: lightGray;
 	color: black;
 	border: gray 6px solid;
 }
@@ -14,4 +14,31 @@ button:active {
 #favorites button img {
 	border: gray 2px solid;
 	background: lightGray;
+}
+
+table {
+	border: 0px;
+	border-collapse: separate;
+	border-spacing: 0 5px;
+	/* margin: 10px; */
+	padding: 0 10px;
+	width: 1004px;
+	color: rgb(255, 255, 255);
+}
+
+thead  tr, tfoot tr{
+	background-color: rgba(255, 255, 255, 0.8);
+	font-weight: bold;
+	color: rgb(0, 0, 0);
+}
+
+tr {
+	height: 50px;
+}
+
+tbody tr:nth-child(2n) {
+	background-color: rgba(255,255,255,0.6);
+}
+tbody tr:nth-child(2n+1) {
+	background-color: rgba(200,200,200,0.6);
 }

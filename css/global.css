@@ -72,7 +72,7 @@ textarea {
 button {
 	border: gray outset 2px;
 	border-radius: .2em;
-	background: rgba(0, 0, 0, 0.05);
+	background: rgba(255, 255, 255, 0.6);
 	color: inherit;
 	cursor: pointer;
 	margin: 0.05em;
