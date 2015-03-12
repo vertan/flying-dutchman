@@ -26,6 +26,7 @@ function listInventory(result) {
 	}
 }
 
+// When all updated items are received, the page reloads.
 function itemUpdated(response) {
 	console.log(receivedItemsCount, updatedItemsCount);
 	receivedItemsCount++;
@@ -34,6 +35,8 @@ function itemUpdated(response) {
 	}
 }
 
+// This function retrieves the number in the updated count fields. The items that are updated
+// (i.e. less than zero - you can't update an item with negative numbers) get their numbers changed.
 function updateStocks() {
 	var retrieveBoxAmount = document.getElementsByClassName("addEditField");
 	var username = sessionStorage.getItem("username");
