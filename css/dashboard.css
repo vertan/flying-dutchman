@@ -1,0 +1,67 @@
+.dashboard li {
+	list-style: none;
+}
+.popular ul {
+	padding: 5px;
+}
+.popular li {
+	background-color: rgba(0,0,0,0.05);
+}
+.popular li:hover {
+	background-color: rgba(0,0,0,0.1);
+}
+.add-popular {
+	position: relative;
+	float: left;
+	padding: 10px;
+	background: #54db30;
+}
+.article {
+	position: relative;
+	padding: 10px;
+}
+#popular-section {
+	float: left;
+	width: 33%;
+}
+#button-section {
+	float: left;
+	width: 33%;
+}
+#cart-section {
+	float: left;
+	width: 33%;
+}
+#cart {
+	background-color: rgba(0,0,0,0.05);
+}
+table.cart {
+	width: 100%;
+	border-spacing: 0px;
+}
+table.cart thead {
+	text-align: left;
+	padding-left: 20px;
+	text-transform: uppercase;
+}
+table.cart td {
+	padding: 5px;
+	padding-left: 20px;
+	border-left: 2px solid #ddd;
+	text-align: left;
+}
+table.cart th {
+	padding: 5px;
+	padding-left: 20px;
+	border-bottom: 3px solid #aeaeae;
+}
+table.cart tbody tr:hover {
+	background-color: rgba(0,0,0,0.05);
+}
+.cost-total {
+	padding: 5px;
+	text-align: right;
+}
+button#checkout {
+	float: right;
+}

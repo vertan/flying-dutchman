@@ -1,0 +1,37 @@
+#manage-button {
+	font-size: 2em;
+	padding: .2em;
+	margin-bottom: 0.5em;
+}
+#add-user-button {
+	font-size: 2em;
+	padding: .2em;
+}
+#user-list {
+	width:350px;
+	height:50px;
+	font-size:30px;
+}
+#user-list option {
+	border-top: solid ButtonHighlight 1px;
+	border-bottom: solid ButtonShadow 1px;
+}
+#user-list .first-name,
+#user-list .last-name,
+#user-list .user-name {
+	display: inline-block;
+	overflow-x: hidden;
+	text-overflow: ".";
+	vertical-align: middle;
+}
+#user-list .first-name,
+#user-list .last-name {
+	width: 6em;
+}
+#user-list .user-name {
+	width: 5em;
+	font-size: 0.7em;
+}
+#user-label {
+	font-size: 2em;
+}
