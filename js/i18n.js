@@ -5,7 +5,7 @@
  * TODO: Plurals.
  */
 
-var userLlang;
+var userLang;
 var dict = sessionStorage.getItem("dict");
 
 function init() {
