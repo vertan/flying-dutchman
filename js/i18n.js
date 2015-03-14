@@ -6,13 +6,20 @@
  */
 
 var userLang;
-var dict = sessionStorage.getItem("dict");
+var dict;
+
+dict = sessionStorage.getItem("dict");
+if (dict) {
+	dict = JSON.parse(dict);
+} else {
+	dict = {};
+}
 
 function init() {
 	userLang = getLang();
 	var langObj = getLangObject(userLang).then(function(response){
 		dict = response;
-		sessionStorage.setItem("dict", dict);
+		sessionStorage.setItem("dict", JSON.stringify(dict));
 		if (window.$) {
 			$("body").children().each(function() {
 				$(this).html($(this).html().replace(/%(\w+)%/g, function(match, $1) {
