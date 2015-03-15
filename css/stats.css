@@ -1,37 +1,56 @@
-#beer-section {
-	float: left;
-	padding: 20px;
+#menu {
+		background: rgba(255, 255, 255, 0.8);
+		display: block;
+		float: none;
+		height: 40px;
+		margin: 0 auto;
+		min-width: 1000px;
+		padding: 10px 0; 
+    width: 1024px;
+}
+#menu ul {
+		margin: 0;
+		padding: 0;
+}
+#menu li {
+		float: left;
+		list-style: none;
+    margin-left: 30px;
+    width: 470px;
+    text-align: center;
+    position: relative;
 }
 
-#user-section {
-	float: left;
-	padding: 20px;
+/* #menu li:first-child { border-right: 1px solid rgba(200,200,200,0.5);} */
+#menu a { text-decoration: none;}
+#menu button { width: 200px;}
+#menu li ul { display: none;}
+#menu>ul>li>a:hover li { display: block;}
+
+header { margin: 0; padding: 0;}
+
+#container {}
+#content {
+		background: rgba(255, 255, 255, 0.8);
+		/* border: 1px #0f0 dotted; */
+		height: 100%;
+		position: relative;
+
 }
 
-.stats ul {
-	float: left;
+#side_menu {
+		background: rgba(255, 0, 0, 0);
+		border-right: 1px dotted rgba(200, 200, 200, 1);
+		float: left;
+		height: 95%;
+		margin: 10px 0;
+		padding: 0 10px;
+		text-align: left;
+		font-size: 0.8em;
+		width: 180px;
 }
-.stats ul li {
-	font-size: 1.7em;
-	list-style: none;
-	margin-left: 0px;
-	display: block;
-	padding-top: 10px;
-}
+#side_menu ul { margin: 0; padding: 0;}
+#side_menu li { list-style: none; line-height: 150%; margin: 0.5em 0; padding: 0;}
+#side_menu button { width: 180px;}
 
-.pieces {
-	padding: 2px;
-	color: #fff;
-	border-radius: 3px;
-	margin-right: 10px;
-}
-
-.min-100 {
-	background: #2cd228;
-}
-.min-50 {
-	background: #a0d228;
-}
-.min-20 {
-	background: #e0de30;
-}
+#user-section canvas {}
