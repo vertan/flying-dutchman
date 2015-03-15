@@ -16,6 +16,7 @@
 	height: 20em;
 }
 #favorites button {
+	transition: none;
 	width: 30%;
 	height: 40%;
 	vertical-align: middle;
