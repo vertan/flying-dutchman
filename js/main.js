@@ -2,10 +2,11 @@ $(function() {
 	$('#cart').droppable({
 		tolerance: 'pointer',
 		drop: function(event, ui) {
-			console.log(event, ui);
-			setTimeout(function() {
-				document.getElementById("cart").appendChild(ui.helper[0]);
-			}, 2000);
+			var name = ui.helper[0].getElementsByClassName("name")[0].innerHTML;
+			console.log(name);
+			var newElement = document.createElement("div");
+			newElement.innerHTML = name;
+			document.getElementById("cart").appendChild(newElement);
 		}
 	});
 	$('#favorites button').draggable({
