@@ -123,10 +123,11 @@ button a {
 	color: inherit;
 }
 button.big {
-	font-size: 3em;
+	font-size: 2.5em;
 }
 
 #top-right {
+	margin: 0.67em;
 	float: right;
 	text-align: right;
 }
