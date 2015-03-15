@@ -23,13 +23,20 @@ header {
 	background: rgba(0, 0, 0, 0.45);
 	transition: background .4s;	
 	padding: 10px;
+	padding-top: 0px;
 	z-index: 10;
 	color: #fff;
 }
 
 header h1 {
-	display: inline;
+	float: left;
 	color: #fff;
+}
+
+.header-container {
+	margin: 0px auto;
+	width: 1004px;
+	padding: 10px;
 }
 
 #navbar {
