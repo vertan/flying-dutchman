@@ -34,7 +34,6 @@ function undo() {
 	console.log(document.getElementById(removeID));
 	console.log(document.getElementById("cart"));
 	document.getElementById("cart").removeChild(document.getElementById(removeID));
-	beersPicked.length--;
 	redo.push(thisID);
 	if (beersPicked.length == 0) {
 		getElementById("nav-undo").disabled = true;

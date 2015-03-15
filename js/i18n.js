@@ -22,9 +22,11 @@ function init() {
 		sessionStorage.setItem("dict", JSON.stringify(dict));
 		if (window.$) {
 			$("body").children().each(function() {
+				/*
 				$(this).html($(this).html().replace(/%(\w+)%/g, function(match, $1) {
 					return getWord(dict, $1);
 				}));
+				*/
 			});
 		} else {
 			console.warn("JQuery not loaded. Include JQuery to enable translation using the %id% syntax.");

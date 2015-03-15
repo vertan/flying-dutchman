@@ -25,9 +25,9 @@
 	"credit-to-add-label": "Credit to add:",
 	"initial-credit-label": "Initial credit:",
 	"new-credit-label": "New credit:",
-	"add-credit-button": "Add credit"
+	"add-credit-button": "Add credit",
 	
-	"user-full-name": "User"
-	"theme-default": "Default theme"
+	"user-full-name": "User",
+	"theme-default": "Default theme",
 	"theme-highcontrast": "High contrast theme"
 }
