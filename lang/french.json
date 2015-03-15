@@ -1,0 +1,30 @@
+{
+	"all_beverages": "Inscrivez toutes les boissons",
+	"account": "compte",
+	"theme": "thème",
+
+
+	"user-management-header": "gestion des utilisateurs", 
+	"user-label": "utilisateurs:",
+	"manage-button": "gérer",
+	"add-user-button": "Ajouter un nouvel utilisateur",
+	
+	"manage-user-header": "gestion des utilisateurs",
+	"edit-user-header": "utilisateur Édition &ldquo;{3}&rdquo;",
+	"edit-user-details-header": "Modifier les détails de l'utilisateur",
+	"first-name-label": "prénom:",
+	"last-name-label": "nom de famille:",
+	"user-name-label": "nom d'utilisateur(Nom de connexion):",
+	"tel-label": "téléphone:",
+	"email-label": "Adresse e-mail:",
+	"password-label": "mot de passe:",
+	"password-confirm-label": "mot de passe(confirmer):",
+	"update-user-button": "mettre à jour",
+	"add-credit-header": "Augmenter l'équilibre",
+	"user-id-label": "ID de l'utilisateur:",
+	"current-credit-label": "solde du compte courant:",
+	"credit-to-add-label": "Solde à ajouter:",
+	"initial-credit-label": "Ajouter balance:",
+	"new-credit-label": "Nouveau solde:",
+	"add-credit-button": "mettre à jour"
+}
