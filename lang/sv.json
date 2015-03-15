@@ -26,4 +26,8 @@
 	"initial-credit-label": "Lägg till saldo:",
 	"new-credit-label": "Ny saldo:",
 	"add-credit-button": "Updatera saldo"
+	
+	"user-full-name": "Användare"
+	"theme-default": "Standard-tema"
+	"theme-highcontrast": "Högkontrast-tema"
 }
