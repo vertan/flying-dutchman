@@ -2,7 +2,7 @@ var beersPicked = [];
 var redo = [];
 
 $(function() {
-	$('#cart').droppable({
+	$('#table_order').droppable({
 		tolerance: 'pointer',
 		drop: function(event, ui) {
 			var name = ui.helper[0].getElementsByClassName("name")[0].innerHTML;
