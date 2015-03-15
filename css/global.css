@@ -14,13 +14,26 @@ body {
 	background-attachment: fixed;
 	color: black;
 	text-align: center;
+	margin: 0px;
+}
+
+header {
+	width: 100%;
+	position: fixed;
+	background: rgba(0, 0, 0, 0.45);
+	transition: background .4s;	
+	padding: 10px;
+	z-index: 10;
+	color: #fff;
+}
+
+header h1 {
+	display: inline;
+	color: #fff;
 }
 
 #navbar {
-	display: inline-block;
-	position: fixed;
-	left: 1em;
-	top: 1em;
+	float: left;
 }
 #navbar .icon {
 	display: inline-block;
@@ -49,12 +62,7 @@ body {
 
 #container {
 	margin: 0px auto;
-}
-
-header {
-    font-size: 1.6em;
-	font-family: serif;
-    font-variant: small-caps;
+	padding-top: 100px;
 }
 
 input[type="text"],
@@ -97,9 +105,7 @@ button.big {
 }
 
 #top-right {
-	position: fixed;
-	top: .5em;
-	right: .5em;
+	float: right;
 	text-align: right;
 }
 #top-right hr {

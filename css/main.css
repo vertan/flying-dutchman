@@ -1,9 +1,11 @@
+
 #container {
 	width: auto;
 }
 
 #container2 {
-	width: auto;
+	width: 1000px;
+	margin: 0px auto;
 }
 
 #berverages-button {
