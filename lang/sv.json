@@ -18,14 +18,14 @@
 	"email-label": "Epost-address:",
 	"password-label": "Lösenord:",
 	"password-confirm-label": "Lösenord (bekräfta):",
-	"update-user-button": "Updatera",
+	"update-user-button": "Uppdatera",
 	"add-credit-header": "Öka saldo",
 	"user-id-label": "Användar-ID:",
 	"current-credit-label": "Nuvarande saldo:",
 	"credit-to-add-label": "Saldo att lägga till:",
 	"initial-credit-label": "Lägg till saldo:",
-	"new-credit-label": "Ny saldo:",
-	"add-credit-button": "Updatera saldo"
+	"new-credit-label": "Nytt saldo:",
+	"add-credit-button": "Uppdatera saldo"
 	
 	"user-full-name": "Användare"
 	"theme-default": "Standard-tema"
