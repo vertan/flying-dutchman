@@ -84,7 +84,7 @@ function creditAddedAnimation(startTime, addAmount, newCredit) {
 	updateNewCredit();
 }
 
-// Try to figgure out the user ID by looking in the purchases log
+// Try to figure out the user ID by looking in the purchases log
 function enterUserID(response) {
 	var users = response.payload;
 	for (var i = 0; i < users.length; i++) {
@@ -120,7 +120,7 @@ function addCredit(e) {
 
 function initEditUser() {
 	db.request("iou_get_all",       fillUserData);
-	db.request("purchases_get_all", enterUserID);	// To figgure out user ID
+	db.request("purchases_get_all", enterUserID);	// To figure out user ID
 	
 	document.getElementById("user-details-form").addEventListener("submit", updateUser,       false);
 	document.getElementById("add-credit-form"  ).addEventListener("submit", addCredit,        false);
