@@ -1,7 +1,7 @@
 var themes = [
 	{
 		name: S("theme-default"),
-		path: null
+		path: ""
 	},
 	{
 		name: S("theme-highcontrast"),
@@ -27,7 +27,9 @@ var themeLink = document.createElement("link");
 themeLink.rel = "stylesheet";
 themeLink.type = "text/css";
 var theme = sessionStorage.getItem("theme");
-setTheme(theme);
+if (theme) {
+	setTheme(theme);
+}
 
 function setThemeHandler(e) {
 	setTheme(e.target.selectedOptions[0].value);
