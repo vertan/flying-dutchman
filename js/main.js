@@ -1,4 +1,5 @@
 var beersPicked = [];
+var redo = [];
 
 $(function() {
 	$('#cart').droppable({
@@ -12,6 +13,9 @@ $(function() {
 			newElement.id = "incart" + ID;
 			beersPicked.push(ID);
 			console.log(beersPicked);
+			getElementById("nav-undo").disabled = false;
+			getElementById("nav-redo").disabled = true;
+			redo = [];
 		}
 	});
 	$('#favorites button').draggable({
@@ -25,11 +29,31 @@ $(function() {
 });
 
 function undo() {
-	var removeID = "incart" + beersPicked[beersPicked.length-1];
+	var thisID = beersPicked.pop();
+	var removeID = "incart" + thisID;
 	console.log(document.getElementById(removeID));
 	console.log(document.getElementById("cart"));
 	document.getElementById("cart").removeChild(document.getElementById(removeID));
 	beersPicked.length--;
+	redo.push(thisID);
+	if (beersPicked.length == 0) {
+		getElementById("nav-undo").disabled = true;
+	}
+	getElementById("nav-redo").disabled = false;
+}
+
+function redo() {
+	var thisID = redo.pop();
+	var name = document.getElementById("fav" + thisID).getElementsByClassName("name")[0].innerHTML;
+	var newElement = document.createElement("div");
+	newElement.innerHTML = name;
+	document.getElementById("cart").appendChild(newElement);
+	newElement.id = "incart" + thisID;
+	beersPicked.push(thisID);
+	getElementById("nav-undo").disabled = false;
+	if (redo.length == 0) {
+		getElementById("nav-redo").disabled = true;
+	}
 }
 
 $(document).scroll(function() {
