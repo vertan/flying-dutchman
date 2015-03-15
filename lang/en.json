@@ -26,4 +26,8 @@
 	"initial-credit-label": "Initial credit:",
 	"new-credit-label": "New credit:",
 	"add-credit-button": "Add credit"
+	
+	"user-full-name": "User"
+	"theme-default": "Default theme"
+	"theme-highcontrast": "High contrast theme"
 }
