@@ -19,7 +19,7 @@
 			<button id="nav-up" disabled="disabled">
 				<div class="icon"></div>
 			</button>
-			<button id="nav-undo" disabled="disabled">
+			<button id="nav-undo" onclick="undo()">
 				<div class="icon"></div>
 				<span id="undo-button-text" class="i18n">Undo</span>
 			</button>
@@ -101,27 +101,27 @@
 				<div id="beerlist">
 					<h2>Quick-add favorites</h2>
 					<div id="favorites">
-						<button id="fav1"><img src="http://res.cloudinary.com/ratebeer/image/upload/w_250,c_limit,q_85,d_beer_def.gif/beer_16428.jpg">
+						<button id="fav1" data-beerid="1" ><img src="http://res.cloudinary.com/ratebeer/image/upload/w_250,c_limit,q_85,d_beer_def.gif/beer_16428.jpg">
 							<div class="name">Beer 1</div>
 							<div class="price">20 kr</div>
 						</button>
-						<button id="fav2"><img src="https://tagracat.files.wordpress.com/2013/01/deadfrogmint.jpg">
+						<button id="fav2" data-beerid="2"><img src="https://tagracat.files.wordpress.com/2013/01/deadfrogmint.jpg">
 							<div class="name">Beer 2</div>
 							<div class="price">20 kr</div>
 						</button>
-						<button id="fav3"><img src="http://www.totalwine.com/_static/webupload/730/2_93316226_3.jpg">
+						<button id="fav3" data-beerid="3"><img src="http://www.totalwine.com/_static/webupload/730/2_93316226_3.jpg">
 							<div class="name">Looooong Beer name No.  3</div>
 							<div class="price">20 kr</div>
 						</button>
-						<button id="fav4"><img src="http://res.cloudinary.com/ratebeer/image/upload/w_250,c_limit,q_85,d_beer_def.gif/beer_16428.jpg">
+						<button id="fav4" data-beerid="4"><img src="http://res.cloudinary.com/ratebeer/image/upload/w_250,c_limit,q_85,d_beer_def.gif/beer_16428.jpg">
 							<div class="name">Beer 4</div>
 							<div class="price">20 kr</div>
 						</button>
-						<button id="fav5"><img src="https://tagracat.files.wordpress.com/2013/01/deadfrogmint.jpg">
+						<button id="fav5" data-beerid="5"><img src="https://tagracat.files.wordpress.com/2013/01/deadfrogmint.jpg">
 							<div class="name">Beer 5</div>
 							<div class="price">20 kr</div>
 						</button>
-						<button id="fav6"><img src="http://www.totalwine.com/_static/webupload/730/2_93316226_3.jpg">
+						<button id="fav6" data-beerid="6"><img src="http://www.totalwine.com/_static/webupload/730/2_93316226_3.jpg">
 							<div class="name">Beer 6</div>
 							<div class="price">20 kr</div>
 						</button>
