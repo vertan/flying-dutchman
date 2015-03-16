@@ -6,16 +6,13 @@ $(function() {
 		tolerance: 'pointer',
 		drop: function(event, ui) {
 			var name = ui.helper[0].getElementsByClassName("name")[0].innerHTML;
-			var newElement = document.createElement("div");
-			newElement.innerHTML = name;
-			document.getElementById("cart").appendChild(newElement);
 			var ID = ui.helper[0].dataset.beerid;
-			newElement.id = "incart" + ID;
 			beersPicked.push(ID);
 			console.log(beersPicked);
-			getElementById("nav-undo").disabled = false;
-			getElementById("nav-redo").disabled = true;
+			document.getElementById("nav-undo").disabled = false;
+			document.getElementById("nav-redo").disabled = true;
 			redo = [];
+			updateCart();
 		}
 	});
 	$('#favorites button').draggable({
@@ -30,29 +27,85 @@ $(function() {
 
 function undo() {
 	var thisID = beersPicked.pop();
-	var removeID = "incart" + thisID;
-	console.log(document.getElementById(removeID));
-	console.log(document.getElementById("cart"));
-	document.getElementById("cart").removeChild(document.getElementById(removeID));
 	redo.push(thisID);
 	if (beersPicked.length == 0) {
 		getElementById("nav-undo").disabled = true;
 	}
 	getElementById("nav-redo").disabled = false;
+	updateCart();
 }
 
 function redo() {
 	var thisID = redo.pop();
 	var name = document.getElementById("fav" + thisID).getElementsByClassName("name")[0].innerHTML;
-	var newElement = document.createElement("div");
-	newElement.innerHTML = name;
-	document.getElementById("cart").appendChild(newElement);
-	newElement.id = "incart" + thisID;
 	beersPicked.push(thisID);
 	getElementById("nav-undo").disabled = false;
 	if (redo.length == 0) {
 		getElementById("nav-redo").disabled = true;
 	}
+	updateCart();
+}
+
+function changeContent(delta, id) {
+	if (delta < 0) {
+		for (var i = beersPicked.length - 1; i >= 0; i--) {
+			if (beersPicked[i] == id) {
+				beersPicked.splice(i, 1);
+				delta++;
+				if (delta >= 0) {
+					break;
+				}
+			}
+		}
+	} else if (delta > 0) {
+		while (delta > 0) {
+			beersPicked.push(id);
+			delta--;
+		}
+	}
+	updateCart();
+}
+
+function updateCart() {
+	var cart = document.getElementById("cart-body");
+	var items = [];
+	var sum = 0;
+	sessionStorage.setItem("cart", JSON.stringify(beersPicked));
+	sessionStorage.setItem("redo", JSON.stringify(redo));
+	for (var i = 0; i < beersPicked.length; i++) {
+		var found = false;
+		for (var j = 0; j < items.length; j++) {
+			if (items[j].id == beersPicked[i]) {
+				items[j].count++;
+				found = true;
+				break;
+			}
+		}
+		if (!found) {
+			items.push({
+				id:    beersPicked[i],
+				name:  "Beer #" + beersPicked[i],
+				price: 25,
+				count: 1
+			});
+		}
+	}
+	while (cart.hasChildNodes()) {
+		cart.removeChild(cart.firstChild);
+	}
+	for (var k = 0; k < items.length; k++) {
+		var row = document.createElement("tr");
+		row.innerHTML =
+			"<th class='beer-name'>" + items[k].name + "</td>" +
+			"<td class='dec'><button type='button' onclick='changeContent(-1, " + items[k].id + ")'>&minus;</button></td>" +
+			"<td class='count'>" + items[k].count + "</td>" +
+			"<td class='inc'><button type='button' onclick='changeContent(1, " + items[k].id + ")'>+</button></td>" +
+			"<td class='count'>" + items[k].count * items[k].price + " SEK</td>" +
+			"<td class='del'><button type='button' onclick='changeContent(-Infinity, " + items[k].id + ")'>&#10799;</button></td>";
+		cart.appendChild(row);
+		sum += items[k].count * items[k].price
+	}
+	document.getElementById("cart-sum").innerHTML = sum + "&nbsp;SEK";
 }
 
 $(document).scroll(function() {
@@ -62,3 +115,11 @@ $(document).scroll(function() {
 		$('#main-header').css('background', 'rgba(0, 0, 0, 0.45)');
 	}
 });
+
+function initCart() {
+	beersPicked = JSON.parse(sessionStorage.getItem("cart"));
+	redo        = JSON.parse(sessionStorage.getItem("redo"));
+	updateCart();
+}
+
+document.addEventListener("DOMContentLoaded", initCart, false);

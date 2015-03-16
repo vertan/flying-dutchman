@@ -63,9 +63,19 @@ tfoot td:nth-child(2) {
 }
 
 td:first-child,
-td:last-child {
-	padding: 0 1em;
+th:first-child {
+	padding-left: 1em;
 }
+td:last-child,
+th:last-child {
+	padding-right: 1em;
+}
+
+tbody > tr > th:first-child,
+tfoot > tr > th:first-child {
+	text-align: left;
+}
+
 #table_order td:first-child,
 #table_afterorder td:first-child {
 	text-align: left;
