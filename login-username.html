@@ -7,17 +7,16 @@
 		<link rel="stylesheet" href="css/login.css" type="text/css">
 		<script src="js/db.js" type="text/javascript"></script>
 		<script src="js/login-username.js" type="text/javascript"></script>
-		<script src="js/translate.js" type="text/javascript"></script>
-		<script src="js/i18next-1.7.7.min.js" type="text/javascript"></script>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-		
+		<script src="js/global.js" type="text/javascript"></script>
 	</head>
 	<body>
-		<div id="container">
-			<header>
-				<h1 id="title" data-i18n="login.title"></h1>
-			</header>
-			
+		<header id="main-header">
+			<div class="header-wrapper">
+				<h1>The Flying Dutchman</h1>
+			</div>
+		</header>
+		<div id="container">			
 			<div id="content">
 				<form id="loginForm" action="#" method="GET">
 					<label for="username">User name:</label> <input type="text" id="username" required="required" autofocus="autofocus">
