@@ -144,7 +144,7 @@ function barChart(ctx, array) {
 		for ( var i = 0; i < 11; i++) {
 				ctx.font = "12px Arial";
 				value = roundUp * i * Math.pow(10, len-2);
-				ctx.fillText(Math.ceil(value), 20, ctx.height - value * h - yPadding);
+				ctx.fillText(Math.ceil(value), 15, ctx.height - value * h - yPadding);
 		}
 		
 		n = array.length;
@@ -153,6 +153,8 @@ function barChart(ctx, array) {
 				ctx.lineWidth = 2;
 				ctx.beginPath();
 
+				console.log(ctx.width);
+				
 				ctx.rect( x + 2 * xPadding, ctx.height - array[i].sales * h - yPadding, bar_width, array[i].sales*h);
 
 				ctx.fillStyle = c_colors[i].fillStyle;
@@ -209,8 +211,8 @@ function pieChart(ctx, radius, x, y, array) {
 
 				ctx.fillStyle = c_colors[i].fillStyle;
 				ctx.font = "15px Arial";
-				ctx.fillText(array[i].name, 100, 100 + i * 30);
-				ctx.fillText(array[i].visits, 200, 100 + i * 30);
+				ctx.fillText(array[i].name, 100, ctx.height/2 - array.length * 10 + i * 30);
+				ctx.fillText(array[i].visits, 200, ctx.height/2 - array.length * 10 + i * 30);
 		}
 
 		ctx.fillStyle = "black";
