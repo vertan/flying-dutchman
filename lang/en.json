@@ -29,5 +29,7 @@
 	
 	"user-full-name": "User",
 	"theme-default": "Default theme",
-	"theme-highcontrast": "High contrast theme"
+	"theme-highcontrast": "High contrast theme",
+	
+	"order-confirmation": "Order confirmation"
 }

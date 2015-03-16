@@ -29,5 +29,8 @@
 	
 	"user-full-name": "Användare",
 	"theme-default": "Standard-tema",
-	"theme-highcontrast": "Högkontrast-tema"
+	"theme-highcontrast": "Högkontrast-tema",
+
+	"order-confirmation": "Orderbekräftelse"
+	
 }
