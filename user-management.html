@@ -12,32 +12,37 @@
 	</head>
 	
 	<body>
-		<div id="navbar">
-			<a href="admin.html">
-				<button id="nav-up">
-					<div class="icon"></div>
-					<span id="administration-header" class="i18n">Administration</span>
-				</button>
-			</a>
-		</div>
-		
-		<div id="top-right">
-			<span id="user"></span>
-			<br>
-			<label for="theme-menu" class="i18n" id="theme-label">Theme:</label>
-			<select id="theme-menu"></select>
-			<hr>
-			<a href="index.html" class="link-button">
-				<button id="logout-button" class="i18n">Log out</button>
-			</a>
-		</div>
-		
-		<div id="container">
-			<header>
-				<h1 id="user-management-header" class="i18n">User Management</h1>
-			</header>
-			
-			<div id="contents">
+
+		<header id="main-header">
+			<div class="header-wrapper">
+				<h1>The Flying Dutchman</h1>
+
+				<div id="top-right">
+					<span id="user"></span>
+					<br>
+					<label for="theme-menu" class="i18n" id="theme-label">Theme:</label>
+					<select id="theme-menu"></select>
+					<hr>
+					<a href="index.html" class="link-button">
+						<button id="logout-button" class="i18n">Log out</button>
+					</a>
+				</div>
+			</div>			
+		</header>
+		<div id="container">			
+			<div id="content">
+				
+				<div id="navbar">
+					<a href="admin.html">
+						<button id="nav-up">
+							<div class="icon"></div>
+							<span id="administration-header" class="i18n">Administration</span>
+						</button>
+					</a>
+				</div>
+				
+
+
 				<form id="user-select" method="GET" action="edit-user.html">
 					<label id="user-label" for="List" class="i18n">User:</label>
 					<select id="user-list"></select>
@@ -46,6 +51,7 @@
 				<a href="add-user.html" class="link-button" accesskey="a">
 					<button id="add-user-button" type="button" class="i18n">Add new user</button>
 				</a>
+				
 			</div>
 		</div>
 	</body>
