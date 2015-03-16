@@ -23,7 +23,7 @@ function init() {
 
 		if (window.$) {
 			$(".i18n").each(function() {
-				$(this).html($(this).html().replace(/%(\w+)%/g, function(match, $1) {
+				$(this).html($(this).html().replace(/%([\w\-]+)%/g, function(match, $1) {
 					return getWord(dict, $1);
 				}));
 			});
