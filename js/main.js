@@ -117,8 +117,18 @@ $(document).scroll(function() {
 });
 
 function initCart() {
-	beersPicked = JSON.parse(sessionStorage.getItem("cart"));
-	redo        = JSON.parse(sessionStorage.getItem("redo"));
+	beersPicked = sessionStorage.getItem("cart");
+	if (beersPicked != null) {
+		beersPicked = JSON.parse(beersPicked);
+	} else {
+		beersPicked = [];
+	}
+	redo = sessionStorage.getItem("redo");
+	if (redo != null) {
+		redo = JSON.parse(redo);
+	} else {
+		redo = [];
+	}
 	updateCart();
 }
 
