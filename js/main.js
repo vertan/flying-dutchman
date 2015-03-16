@@ -110,6 +110,12 @@ $(function() {
 			$(ui.helper).addClass("nicer");
 		}
 	});
+	$('#favorites button').click(function(e) {
+		var name = e.target.getElementsByClassName("name")[0].innerHTML;
+		var price = e.target.getElementsByClassName("price")[0].innerHTML.split(" ")[0] - 0;
+		var ID = e.target.dataset.beerid;
+		addItem(ID, name, price, 1);
+	});
 });
 
 function undo() {
