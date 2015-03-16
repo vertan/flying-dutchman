@@ -29,9 +29,9 @@ function undo() {
 	var thisID = beersPicked.pop();
 	redo.push(thisID);
 	if (beersPicked.length == 0) {
-		getElementById("nav-undo").disabled = true;
+		document.getElementById("nav-undo").disabled = true;
 	}
-	getElementById("nav-redo").disabled = false;
+	document.getElementById("nav-redo").disabled = false;
 	updateCart();
 }
 
@@ -39,9 +39,9 @@ function redo() {
 	var thisID = redo.pop();
 	var name = document.getElementById("fav" + thisID).getElementsByClassName("name")[0].innerHTML;
 	beersPicked.push(thisID);
-	getElementById("nav-undo").disabled = false;
+	document.getElementById("nav-undo").disabled = false;
 	if (redo.length == 0) {
-		getElementById("nav-redo").disabled = true;
+		document.getElementById("nav-redo").disabled = true;
 	}
 	updateCart();
 }
