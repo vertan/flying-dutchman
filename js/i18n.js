@@ -20,25 +20,21 @@ function init() {
 	var langObj = getLangObject(userLang).then(function(response){
 		dict = response;
 		sessionStorage.setItem("dict", JSON.stringify(dict));
+
 		if (window.$) {
-			$("body").children().each(function() {
-				/*
+			$(".i18n").each(function() {
 				$(this).html($(this).html().replace(/%(\w+)%/g, function(match, $1) {
 					return getWord(dict, $1);
 				}));
-				*/
 			});
 		} else {
 			console.warn("JQuery not loaded. Include JQuery to enable translation using the %id% syntax.");
 		}
-		var es = document.getElementsByClassName("i18n");
-		for (var i = 0; i < es.length; i++) {
-			var e = es[i];
-			e.innerHTML = S(e.id);
-		}
 	}, function(error) {
 		console.log(error);
 	});
+
+	
 }
 
 function getWord(dictionary, wordID) {
