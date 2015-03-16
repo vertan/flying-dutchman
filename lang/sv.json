@@ -27,10 +27,21 @@
 	"new-credit-label": "Nytt saldo:",
 	"add-credit-button": "Uppdatera saldo",
 	
-	"user-full-name": "Användare",
+	"user-full-name": "{1} {2}",
+	"credit": "{1}",
+	"logout-button": "Logga ut",
 	"theme-default": "Standard-tema",
 	"theme-highcontrast": "Högkontrast-tema",
-
+	
+	"beverage-name-table-header": "Namn på dryck",
+	"quantity-table-header": "Antal",
+	"price-table-header": "Pris",
+	"total-footer": "Totalt:",
+	"quick-add-header": "Lägg till favoriter",
+	
+	"cancel": "Töm",
+	"buy": "Köp",
+	
 	"order-confirmation": "Orderbekräftelse"
 	
 }

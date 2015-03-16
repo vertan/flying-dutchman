@@ -27,9 +27,19 @@
 	"new-credit-label": "New credit:",
 	"add-credit-button": "Add credit",
 	
-	"user-full-name": "User",
+	"user-full-name": "{1} {2}",
+	"credit": "{1}",
+	"logout-button": "Log out",
 	"theme-default": "Default theme",
 	"theme-highcontrast": "High contrast theme",
+	
+	"beverage-name-table-header": "Beverage name",
+	"quantity-table-header": "Quantity",
+	"price-table-header": "Price",
+	"quick-add-header": "Quick-add favorites",
+	
+	"cancel": "Clear",
+	"buy": "Buy",
 	
 	"order-confirmation": "Order confirmation"
 }

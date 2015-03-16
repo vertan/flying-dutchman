@@ -50,16 +50,16 @@
 					<table id="table_order">
 						<thead>
 							<tr>
-								<th>Beer</th>
-								<th colspan="3">Quantity</th>
-								<th>Price</th>
-								<th>&nbsp;</th>
+								<th id="beverage-name-table-header" class="i18n"></th>
+								<th id="quantity-table-header" class="i18n" colspan="3"></th>
+								<th id="price-table-header" class="i18n"></th>
+								<th></th>
 							</tr>
 						</thead>
 						<tbody id="cart-body"></tbody>
 						<tfoot>
 							<tr>
-								<th colspan="4">Total:</th>
+								<th id="total-footer" class="i18n" colspan="4"></th>
 								<td id="cart-sum"></td>
 								<td></td>
 							</tr>
@@ -67,9 +67,9 @@
 					</table>
 
 					<div id="buttons">
-						<button class="btn" id="cancel">Cancel</button>
+						<button id="cancel" class="i18n">Clear</button>
 						<a href="checkout.html">
-							<button class="btn" id="buy">Buy</button>
+							<button id="buy" class="i18n">Buy</button>
 						</a>
 					</div>
 
@@ -89,7 +89,7 @@
 				</div>
 
 				<div id="beerlist">
-					<h2>Quick-add favorites</h2>
+					<h2 id="quick-add-header" class="i18n">Quick-add favorites</h2>
 					<div id="favorites">
 						<button id="fav1" data-beerid="1" ><img src="http://res.cloudinary.com/ratebeer/image/upload/w_250,c_limit,q_85,d_beer_def.gif/beer_16428.jpg">
 							<div class="name">Beer 1</div>
