@@ -105,7 +105,7 @@ $(function() {
 	$('#favorites button').draggable({
 		cancel: false,
 		helper: "clone",
-		revert: true,
+		revert: "invalid",
 		drag: function(event, ui) {
 			$(ui.helper).addClass("nicer");
 		}
