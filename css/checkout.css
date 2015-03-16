@@ -84,6 +84,9 @@ tfoot > tr > th:first-child {
 #cancel {
 	float: left;
 }
+#buy {
+	background-color: rgba(191, 255, 191, 0.6);
+}
 #add, #buy, #logout {
 	float: right;
 	margin-left: 10px;
