@@ -3,7 +3,6 @@
 	"account": "compte",
 	"theme": "thème",
 
-
 	"user-management-header": "gestion des utilisateurs", 
 	"user-label": "utilisateurs:",
 	"manage-button": "gérer",
@@ -27,4 +26,8 @@
 	"initial-credit-label": "Ajouter balance:",
 	"new-credit-label": "Nouveau solde:",
 	"add-credit-button": "mettre à jour"
+	
+	"user-full-name": "Utilisateur",
+	"theme-default": "Défaut thème",
+	"theme-highcontrast": "Contraste élevé thème"
 }
