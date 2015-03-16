@@ -12,33 +12,36 @@
 		<script src="js/edit-user.js" type="text/javascript"></script>
 	</head>
 	<body>
-		<div id="navbar">
-			<a href="user-management.html" class="link-button">
-				<button id="nav-up">
-					<div class="icon"></div>
-					<span id="user-management-header" class="i18n">User management</span>
-				</button>
-			</a>
-		</div>
-		
-		<div id="top-right">
-			<span id="user"></span>
-			<br>
-			<label for="theme-menu" class="i18n" id="theme-label">Theme:</label>
-			<select id="theme-menu"></select>
-			<hr>
-			<a href="index.html" class="link-button">
-				<button id="logout-button" class="i18n">Log out</button>
-			</a>
-		</div>
-		
-		<div id="content">
-			<header>
-				<h1 id="manage-user-header" class="i18n">Manage user</h1>
-				<h2 id="user-header">…</h2>
-			</header>
 
-			<div id="container">
+		<header id="main-header">
+			<div class="header-wrapper">
+				<h1>The Flying Dutchman</h1>
+			</div>
+			<div id="top-right">
+				<span id="user"></span>
+				<br>
+				<label for="theme-menu" class="i18n" id="theme-label">Theme:</label>
+				<select id="theme-menu"></select>
+				<hr>
+				<a href="index.html" class="link-button">
+					<button id="logout-button" class="i18n">Log out</button>
+				</a>
+			</div>
+			
+		</header>
+		<div id="container">			
+			<div id="content">
+
+				
+				<div id="navbar">
+					<a href="user-management.html" class="link-button">
+						<button id="nav-up">
+							<div class="icon"></div>
+							<span id="user-management-header" class="i18n">User management</span>
+						</button>
+					</a>
+				</div>
+				
 				<form id="user-details-form" method="GET" action="#">
 					<table id="user-details-box">
 						<thead>
