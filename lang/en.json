@@ -36,6 +36,7 @@
 	"beverage-name-table-header": "Beverage name",
 	"quantity-table-header": "Quantity",
 	"price-table-header": "Price",
+	"total-footer": "Total:",
 	"quick-add-header": "Quick-add favorites",
 	
 	"cancel": "Clear",
