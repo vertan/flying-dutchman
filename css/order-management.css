@@ -21,7 +21,6 @@ table.orders tbody tr:hover {
 }
 
 #updateButton {
-	position: fixed;
 	bottom: 1em;
 	font-size: 2em;
 }
