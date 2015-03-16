@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>The Flying Dutchman</title>
+		<link rel="stylesheet" href="css/global.css" type="text/css">
+		<!-- <link rel="stylesheet" href="css/login.css" type="text/css"> -->
+		<style>
+			#loginForm {
+				font-size: 1.2em;
+			}
+			th {
+				text-align: left;
+			}
+			input[type=text],
+			input[type=number] {
+				width: 10em;
+				font-size: 1.5em;
+			}
+			button {
+				font-size: 1.5em;
+			}
+		</style>
+		<script src="js/login-fake.js" type="text/javascript"></script>
+	</head>
+	<body>
+		<header id="main-header">
+			<div class="header-wrapper">
+				<h1>The Flying Dutchman</h1>
+				<h2>Login faker</h2>
+			</div>
+		</header>
+		<div id="container">			
+			<div id="content">
+				<form id="loginForm" action="#" method="GET">
+					<table>
+						<tr>
+							<td colspan="2">
+								<input type="checkbox" id="clear" checked="checked">
+								<label for="clear">Clear sessionStorage</label>
+							</td>
+						</tr>
+						<tr>
+							<th><label for="lang">lang:</label></th>
+							<td><input type="text" id="lang" value="en" list="langs" class="saved-field"></td>
+						</tr>
+						<tr>
+							<th><label for="theme">theme:</label></th>
+							<td><input type="text" id="theme" value="" list="themes" class="saved-field"></td>
+						</tr>
+						<tr><td colspan="2"><hr></td></tr>
+						<tr>
+							<th><label for="username">username:</label></th>
+							<td><input type="text" id="username" autofocus="autofocus" value="jorass" class="saved-field"></td>
+						</tr>
+						<tr>
+							<th><label for="password">password:</label></th>
+							<td><input type="text" id="password" value="jorass" class="saved-field"></td>
+						</tr>
+						<tr>
+							<th><label for="userID">userID:</label></th>
+							<td><input type="text" id="userID" value="2" list="user-ids" class="saved-field"></td>
+						</tr>
+						<tr>
+							<th><label for="firstName">firstName:</label></th>
+							<td><input type="text" id="firstName" value="Jory" class="saved-field"></td>
+						</tr>
+						<tr>
+							<th><label for="lastName">lastName:</label></th>
+							<td><input type="text" id="lastName" value="Assies" class="saved-field"></td>
+						</tr>
+						<tr>
+							<th><label for="credit">credit:</label></th>
+							<td><input type="number" id="credit" value="1000" class="saved-field"></td>
+						</tr>
+						<tr><td colspan="2"><hr></td></tr>
+						<tr>
+							<th><label for="managedUser">managedUser:</label></th>
+							<td><input type="text" id="managedUser" value="2" list="user-ids" class="saved-field"></td>
+						</tr>
+						<tr><td colspan="2"><hr></td></tr>
+						<tr>
+							<th><label for="credit">Page:</label></th>
+							<td><input type="text" id="page" value="main.html" list="pages"></td>
+						</tr>
+						<tr>
+							<td colspan="2">
+								<button id="loginButton" type="submit">Login</button>
+							</td>
+						</tr>
+					</table>
+				</form>
+				
+				<datalist id="themes">
+					<option>css/themes/high-contrast.css</option>
+				</datalist>
+				
+				<datalist id="langs">
+					<option>en</option>
+					<option>sv</option>
+					<option>fr</option>
+				</datalist>
+				
+				<datalist id="user-ids">
+					<option value="2">jorass</option>
+				</datalist>
+				
+				<datalist id="pages">
+					<option>main.html</option>
+					<option>admin-menu.html</option>
+					<option>edit-user.html</option>
+				</datalist>
+			</div>
+			
+			<footer>
+				<!-- Short information and sitemap -->
+			</footer>
+		</div>
+	</body>
+</html>
