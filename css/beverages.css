@@ -1,30 +1,24 @@
 .boxed {
 	display: inline-block;
-	text-align: right;
+	/* text-align: right; */
 }
 #filters {
-	display: inline-block;
+		display: inline-block;
+		width: 1004px;
 }
 #content {
 	text-align:left;
 }
 #beverage-list {
-	border: 1px inset black;
+		border: 1px inset 
 }
-#beverage-list .name {
-	width: 8em;
+#beverage-list .name, #beverage-list .name2 {
+	width: 28em;
 	height: 2em;
-	text-align: left;
-	display: inline-block;
-}
-#beverage-list .name2 {
-	width: 8em;
-	height: 2em;
-	text-align: left;
 	display: inline-block;
 }
 #beverage-list .image {
-	width: 2em;
+	width: 4em;
 	height: 2em;
 	Text-align: center;
 	display: inline-block;
@@ -46,4 +40,8 @@
 	float:left;
 	top: 5px;
 	left: 5px;
+}
+
+#beverage>div {
+		height: 35px;
 }
