@@ -112,7 +112,7 @@ td:last-child {
 	margin-left: 10px;
 }
 
-button#checkout {
+#buybutton {
 	float: right;
 	bottom: 0px;
 	font-size: 3em;
@@ -120,6 +120,7 @@ button#checkout {
 	padding: 0 0px;
 	text-align: center;
 	width: 200px;
+	background-color: rgba(191, 255, 191, 0.6);
 }
 #beveragelist {
 	float: right;
@@ -138,33 +139,33 @@ button#checkout {
 }
 #popular1{
 float: left;
-width: 150px;
+width: 175px;
 height: 100px;
-font-size: 2em;
+font-size: 1em;
 margin: 7px;
 }
 
 #popular2{
 float: left;
-width: 150px;
+width: 175px;
 height: 100px;
-font-size: 2em;
+font-size: 1em;
 margin: 7px;
 }
 
 #popular3{
 float: left;
-width: 150px;
+width: 175px;
 height: 100px;
-font-size: 2em;
+font-size: 1em;
 margin: 7px;
 }
 
 #popular4{
 float: left;
-width: 150px;
+width: 175px;
 height: 100px;
-font-size: 2em;
+font-size: 1em;
 margin: 7px;
 }
 
