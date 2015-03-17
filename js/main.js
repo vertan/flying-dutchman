@@ -51,6 +51,8 @@ function removeItem(id) {
 function clearCart() {
 	pushUndo();
 	cart = [];
+	document.getElementById("redo-button").disabled = true;
+	redoStack = [];
 	updateCart();
 }
 
@@ -86,14 +88,14 @@ function changeQuantity(id, delta) {
 }
 
 function pushUndo() {
-	document.getElementById("nav-undo").disabled = true;
+	document.getElementById("redo-button").disabled = true;
 	redoStack = [];
 	undoStack.push(deepCopy(cart));
-	document.getElementById("nav-undo").disabled = false;
+	document.getElementById("undo-button").disabled = false;
 }
 
 $(function() {
-	$('#table_order').droppable({
+	$('#cart-container').droppable({
 		tolerance: 'pointer',
 		drop: function(event, ui) {
 			var name = ui.helper[0].getElementsByClassName("name")[0].innerHTML;
@@ -126,9 +128,9 @@ function undo() {
 	redoStack.push(deepCopy(cart));
 	cart = undoStack.pop();
 	if (undoStack.length == 0) {
-		document.getElementById("nav-undo").disabled = true;
+		document.getElementById("undo-button").disabled = true;
 	}
-	document.getElementById("nav-redo").disabled = false;
+	document.getElementById("redo-button").disabled = false;
 	updateCart();
 }
 
@@ -139,9 +141,9 @@ function redo() {
 	}
 	undoStack.push(deepCopy(cart));
 	cart = redoStack.pop();
-	document.getElementById("nav-undo").disabled = false;
+	document.getElementById("undo-button").disabled = false;
 	if (redoStack.length == 0) {
-		document.getElementById("nav-redo").disabled = true;
+		document.getElementById("redo-button").disabled = true;
 	}
 	updateCart();
 }
@@ -185,11 +187,11 @@ function initCart() {
 	undoStack = undoStack ? JSON.parse(undoStack) : [];
 	redoStack = sessionStorage.getItem("redo");
 	redoStack = redoStack ? JSON.parse(redoStack) : [];
-	document.getElementById("nav-undo").addEventListener("click", undo,      false);
-	document.getElementById("nav-redo").addEventListener("click", redo,      false);
-	document.getElementById("cancel"  ).addEventListener("click", clearCart, false);
-	document.getElementById("nav-undo").disabled = (undoStack.length == 0);
-	document.getElementById("nav-redo").disabled = (redoStack.length == 0);
+	document.getElementById("undo-button").addEventListener("click", undo,      false);
+	document.getElementById("redo-button").addEventListener("click", redo,      false);
+	document.getElementById("cancel"     ).addEventListener("click", clearCart, false);
+	document.getElementById("undo-button").disabled = (undoStack.length == 0);
+	document.getElementById("redo-button").disabled = (redoStack.length == 0);
 	updateCart();
 }
 

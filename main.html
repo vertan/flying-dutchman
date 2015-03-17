@@ -20,7 +20,7 @@
 		<header id="main-header">
 			<div class="header-wrapper">
 
-				<h1>The Flying Dutchman</h1>			
+				<h1>The Flying Dutchman</h1>
 
 				<div id="top-right">
 					<span id="user"></span>
@@ -42,52 +42,7 @@
 		</header>
 		
 		<div id="container">
-			
 			<div id="content" class="content-loggedin">
-
-				<div id="container2">
-					
-					<table id="table_order">
-						<thead>
-							<tr>
-								<th id="beverage-name-table-header" class="i18n"></th>
-								<th id="quantity-table-header" class="i18n" colspan="3"></th>
-								<th id="price-table-header" class="i18n"></th>
-								<th></th>
-							</tr>
-						</thead>
-						<tbody id="cart-body"></tbody>
-						<tfoot>
-							<tr>
-								<th id="total-footer" class="i18n" colspan="4"></th>
-								<td id="cart-sum"></td>
-								<td></td>
-							</tr>
-						</tfoot>
-					</table>
-
-					<div id="buttons">
-						<button id="cancel" class="i18n">Clear</button>
-						<a href="checkout.html">
-							<button id="buy" class="i18n">Buy</button>
-						</a>
-					</div>
-
-					<div id="navbar">
-						<button id="nav-up" disabled="disabled">
-							<div class="icon"></div>
-						</button>
-						<button id="nav-undo">
-							<div class="icon"></div>
-							<span id="undo-button-text" class="i18n">Undo</span>
-						</button>
-						<button id="nav-redo">
-							<div class="icon"></div>
-							<span id="redo-button-text" class="i18n">Redo</span>
-						</button>
-					</div>
-				</div>
-
 				<div id="beerlist">
 					<h2 id="quick-add-header" class="i18n">Quick-add favorites</h2>
 					<div id="favorites">
@@ -119,6 +74,46 @@
 					<a href="beverages.html" accesskey="v">
 						<button id="berverages-button" class="i18n" >%all_beverages%</button>
 					</a>
+				</div>
+				<div id="cart-container">
+					<div id="cart-undo-bar">
+						<button id="undo-button">
+							<div class="icon"></div>
+							<span id="undo-button-text" class="i18n">Undo</span>
+						</button>
+						<button id="redo-button">
+							<div class="icon"></div>
+							<span id="redo-button-text" class="i18n">Redo</span>
+						</button>
+					</div>
+
+					<div id="cart-table-container">
+						<table id="cart-table">
+							<thead>
+								<tr>
+									<th id="beverage-name-table-header" class="i18n"></th>
+									<th id="quantity-table-header" class="i18n" colspan="3"></th>
+									<th id="price-table-header" class="i18n"></th>
+									<th></th>
+								</tr>
+							</thead>
+							<tbody id="cart-body"></tbody>
+							<tfoot>
+								<tr>
+									<th id="total-footer" class="i18n" colspan="4"></th>
+									<td id="cart-sum"></td>
+									<td></td>
+								</tr>
+							</tfoot>
+						</table>
+					</div>
+
+					<div id="buttons">
+						<button id="cancel" class="i18n">Clear</button>
+						<a href="checkout.html">
+							<button id="buy" class="i18n">Buy</button>
+						</a>
+					</div>
 				</div>
 			</div>
 			

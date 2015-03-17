@@ -65,6 +65,7 @@ header #navbar {
 	margin: 10px;
 	padding: 0.67em;
 }
+#cart-undo-bar .icon,
 #navbar .icon {
 	display: inline-block;
 	width: 2em;
@@ -74,15 +75,6 @@ header #navbar {
 }
 #navbar #nav-up .icon {
 	background-image: url("../images/up.svg");
-}
-#navbar #nav-undo .icon {
-	background-image: url("../images/undo.svg");
-}
-#navbar #nav-redo .icon {
-	background-image: url("../images/redo.svg");
-}
-#navbar :disabled .icon {
-	opacity: 0.5;
 }
 
 .link-button {
