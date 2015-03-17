@@ -30,40 +30,147 @@
 	float: left;
 	width: 33%;
 }
-#cart-section {
+#container2 {
 	float: left;
 	width: 33%;
 }
-#cart {
-	background-color: rgba(0,0,0,0.05);
+table {
+	border: 0px;
+	border-collapse: separate;
+	border-spacing: 0 5px;
+	margin: 10px;
+	padding: 0 10px;
+	width: 450px;
+	color: rgb(0, 0, 0);
 }
-table.cart {
-	width: 100%;
-	border-spacing: 0px;
+table button {
+	font-size: 1.5em;
+	min-width: 40px;
 }
-table.cart thead {
-	text-align: left;
-	padding-left: 20px;
-	text-transform: uppercase;
+
+thead  tr, tfoot tr{
+	background-color: rgba(255, 255, 255, 0.8);
+	font-weight: bold;
 }
-table.cart td {
-	padding: 5px;
-	padding-left: 20px;
-	border-left: 2px solid #ddd;
-	text-align: left;
+
+tr {
+	height: 50px;
 }
-table.cart th {
-	padding: 5px;
-	padding-left: 20px;
-	border-bottom: 3px solid #aeaeae;
+
+tbody tr:nth-child(2n) {
+	background-color: rgba(255,255,255,0.6);
 }
-table.cart tbody tr:hover {
-	background-color: rgba(0,0,0,0.05);
+tbody tr:nth-child(2n+1) {
+	background-color: rgba(240,240,240,0.6);
 }
-.cost-total {
-	padding: 5px;
+
+td {
+	min-width: 50px;
+	max-width: 200px;
 	text-align: right;
 }
+#table_afterorder td {
+	min-width: 100px;
+	text-align: center;
+}
+
+td:nth-child(2),
+td:nth-child(3),
+td:nth-child(4),
+td:last-child {
+	text-align: center;
+	width: 50px;
+}
+tfoot td:nth-child(2) {
+	text-align: right;
+}
+
+td:first-child,
+td:last-child {
+	padding: 0 1em;
+}
+#table_order td:first-child,
+#table_afterorder td:first-child {
+	text-align: left;
+}
+
+#cancel {
+	float: left;
+}
+#add, #buy, #logout {
+	float: right;
+	margin-left: 10px;
+}
+
 button#checkout {
 	float: right;
+	bottom: 0px;
+	font-size: 3em;
+	margin: 10px;
+	padding: 0 0px;
+	text-align: center;
+	width: 200px;
 }
+
+#buttonmenu td{
+	bottom: 0px;
+	font-size: 2em;
+	margin: 10px;
+	padding: 10px;
+	text-align: center;
+	width: 150px;
+}
+#ad{
+float: left;
+width: 120px;
+height: 120px;
+font-size: 2em;
+margin: 10px;
+}
+#eh{
+float: center;
+width: 120px;
+height: 120px;
+font-size: 2em;
+margin: 10px;
+}
+#il{
+float: right;
+width: 120px;
+height: 120px;
+font-size: 2em;
+margin: 10px;
+}
+#mp{
+float: left;
+width: 120px;
+height: 120px;
+font-size: 2em;
+margin: 10px;
+}
+#qt{
+float: center;
+width: 120px;
+height: 120px;
+font-size: 2em;
+margin: 10px;
+}
+#uz{
+float: right;
+width: 120px;
+height: 120px;
+font-size: 2em;
+margin: 10px;
+}
+#num{
+float: left;
+width: 120px;
+height: 120px;
+font-size: 2em;
+margin: 10px;
+}
+
+
+
+
+

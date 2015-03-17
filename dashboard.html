@@ -43,40 +43,58 @@
 					</ul>
 				</div>
 				<div id="button-section">
-					<h2>Menu</h2>
-					<ul>
-						<li>Add beverage</li>
-						<li>Checkout</li>
-					</ul>
-				</div>
-				<div id="cart-section">
-					<h2>Cart</h2>
-					<div id="cart">
-						<table class="cart">
-							<thead>
-								<tr>
-									<th>Article</th>
-									<th>Amount</th>
-									<th>Cost</th>
-								</tr>
-							</thead>
-							<tr>
-								<td>Heineken</td>
-								<td>2</td>
-								<td>70</td>
-							</tr>
-							<tr>
-								<td>Norrlands Guld</td>
-								<td>1</td>
-								<td>30</td>
-							</tr>					
-						</table>
-						<div class="cost-total">
-							Total cost: 100 SEK
-						</div>
-						<a href="admin-checkout.html"><button id="checkout">Checkout</button></a>
+					<div>
+					<button id=ad>A-D</button>
+					<button id=eh>E-H</button>
+					<button id=il>I-L</button>
 					</div>
-				</div>				
+					<div>
+					<button id=mp>M-P</button>
+					<button id=qt>Q-T</button>
+					<button id=uz>U-Z</button>
+					</div>
+					<div>
+					<button id=num>1-9</button>
+					</div>
+				</div>
+					<div id="container2">
+					<table id="table_order">
+						<thead>
+							<tr>
+								<td>Beer</td>   	<!-- First child -->
+								<td>&nbsp;</td> 	<!-- Second child-->
+								<td>Quantity</td>    <!-- Third child -->
+								<td>&nbsp;</td> 	<!-- Fourth child -->
+								<td>Price</td>  	<!-- Fifth child -->
+								<td>&nbsp;</td> 	<!-- Last child-->
+							</tr>
+						</thead>
+						<tfoot>
+							<td colspan="1">Total:</td>
+							<td colspan="4">50</td>
+							<td>&nbsp;</td>
+						</tfoot>
+						<tbody>
+							<tr id="1">
+								<td>Norrlands Guld</td>
+								<td><button onclick="changeContent('-1', this);" value="">-</button></td>
+								<td>2</td>
+								<td><button onclick="changeContent('1', this);" value="">+</button></td>
+								<td>25 SEK</td>
+								<td><button onclick="changeContent('0', this);" value="">X</button></td>
+							</tr>
+							<tr id="2">
+								<td>Mariestad</td>
+								<td><button onclick="changeContent('-1', this);" value="">-</button></td>
+								<td>1</td>
+								<td><button onclick="changeContent('1', this);" value="">+</button></td>
+								<td>25 SEK</td>
+								<td><button onclick="changeContent('0', this);" value="">X</button></td>
+							</tr>
+						</tbody>
+					</table>
+					<button id="checkout">Buy</button>
+				</div>
 			</div>
 		</div>
 	</body>
