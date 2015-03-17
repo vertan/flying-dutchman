@@ -2,6 +2,13 @@
 	"all_beverages": "List all beverages",
 	"account": "Account",
 	"theme": "Theme",
+	
+	"admin-menu-header": "Administration",
+
+	"dashboard-header": "Bartender dashboard",
+	
+	"order-management-header": "Order management",
+	"stats-button": "View statistics",
 
 	"user-management-header": "User Management", 
 	"user-label": "User:",
@@ -9,6 +16,7 @@
 	"add-user-button": "Add new user",
 	
 	"manage-user-header": "Manage user",
+	"add-user-header": "Adding new user",
 	"edit-user-header": "Editing user &ldquo;{3}&rdquo;",
 	"edit-user-details-header": "Edit user details",
 	"first-name-label": "First name:",

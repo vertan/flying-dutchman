@@ -3,12 +3,22 @@
 	"account": "Konto",
 	"theme": "Tema",
 
+	"admin-menu-header": "Administration",
+	
+	"dashboard-header": "Bartender-dashboard",
+
+	"order-management-header": "Orderhantering",
+	"stats-button": "Visa statistik",
+	
+	"global-payment-history-header": "Inbetalningshistorik",
+	
 	"user-management-header": "Användarhantering", 
 	"user-label": "Användare:",
 	"manage-button": "Hantera",
 	"add-user-button": "Lägg till ny användare",
 	
 	"manage-user-header": "Hantera användare",
+	"add-user-header": "Lägger till ny användare",
 	"edit-user-header": "Redigerar användaren &ldquo;{3}&rdquo;",
 	"edit-user-details-header": "Redigera användaruppgifter",
 	"first-name-label": "Förnamn:",

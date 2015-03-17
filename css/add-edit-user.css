@@ -1,9 +1,15 @@
-#container > * {
-	text-align: left;
+#content {
+	display: inline-block;
+	width: auto;
 }
 
 form {
 	display: inline-block;
+	text-align: left;
+}
+
+h2 {
+	margin-top: 2em;
 }
 
 table,
@@ -12,7 +18,7 @@ table input {
 }
 table {
 	display: inline-block;
-	margin: 2em;
+	margin: 1em 2em;
 	vertical-align: top;
 }
 thead th {

@@ -14,8 +14,16 @@
 	</head>
 	
 	<body>
-
 		<header id="main-header">
+			<div id="navbar">
+				<a href="admin.html">
+					<button id="nav-up">
+						<div class="icon"></div>
+						<span id="administration-header" class="i18n">Administration</span>
+					</button>
+				</a>
+			</div>
+			
 			<div class="header-wrapper">
 				<h1>The Flying Dutchman</h1>
 
@@ -31,29 +39,19 @@
 				</div>
 			</div>			
 		</header>
-		<div id="container">			
+		
+		<div id="container">		
 			<div id="content">
-				
-				<div id="navbar">
-					<a href="admin.html">
-						<button id="nav-up">
-							<div class="icon"></div>
-							<span id="administration-header" class="i18n">Administration</span>
-						</button>
-					</a>
-				</div>
-				
-
-
+				<h2 id="user-management-header" class="i18n">User management</h2>
 				<form id="user-select" method="GET" action="edit-user.html">
 					<label id="user-label" for="List" class="i18n">User:</label>
 					<select id="user-list"></select>
 					<button id="manage-button" type="submit" class="i18n" accesskey="m" disabled="disabled">Manage</button>
 				</form>
+				
 				<a href="add-user.html" class="link-button" accesskey="a">
 					<button id="add-user-button" type="button" class="i18n">Add new user</button>
 				</a>
-				
 			</div>
 		</div>
 	</body>

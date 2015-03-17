@@ -9,31 +9,35 @@
 		<script src="js/theme.js" type="text/javascript"></script>
 	</head>
 	<body>
-		<div id="navbar">
-			<a href="admin-menu.html" class="link-button">
-				<button id="nav-up">
-					<div class="icon"></div>
-					<span id="main-menu-header" class="i18n">Main menu</span>
-				</button>
-			</a>
-		</div>
-		
-		<div id="top-right">
-			<span id="user"></span>
-			<br>
-			<label for="theme-menu" class="i18n" id="theme-label">Theme:</label>
-			<select id="theme-menu"></select>
-			<hr>
-			<a href="index.html" class="link-button">
-				<button id="logout-button" class="i18n">Log out</button>
-			</a>
-		</div>
+		<header id="main-header">
+			<div id="navbar">
+				<a href="admin.html">
+					<button id="nav-up">
+						<div class="icon"></div>
+						<span id="administration-header" class="i18n">Administration</span>
+					</button>
+				</a>
+			</div>
+			
+			<div class="header-wrapper">
+				<h1>The Flying Dutchman</h1>
+
+				<div id="top-right">
+					<span id="user"></span>
+					<br>
+					<label for="theme-menu" class="i18n" id="theme-label">Theme:</label>
+					<select id="theme-menu"></select>
+					<hr>
+					<a href="index.html" class="link-button">
+						<button id="logout-button" class="i18n">Log out</button>
+					</a>
+				</div>
+			</div>			
+		</header>
 		
 		<div id="container">
-			<header>
-				<h1>Bartender dashboard</h1>
-			</header>
 			<div id="contents" class="dashboard">
+				<h2 id="dashboard-header" class="i18n">Bartender dashboard</h2>
 				<div id="popular-section">
 					<h2>Popular items</h2>
 					<ul class="popular">
