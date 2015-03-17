@@ -7,21 +7,21 @@
 	width: 100%;
 	height: 20em;
 }
-#favorites button {
+.fav-beer {
 	transition: none;
 	width: 30%;
 	height: 40%;
 	vertical-align: middle;
 }
-#favorites button img {
+.fav-beer img {
 	height: 90%;
 	border: gray outset 1px;
 	float: left;
 }
-#favorites button .name {
+.fav-beer .name {
 	font-size: 1.5em;
 }
-#favorites button .price {
+.fav-beer .price {
 	float: right;
 }
 

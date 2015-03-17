@@ -92,32 +92,6 @@ function pushUndo() {
 	document.getElementById("nav-undo").disabled = false;
 }
 
-$(function() {
-	$('#table_order').droppable({
-		tolerance: 'pointer',
-		drop: function(event, ui) {
-			var name = ui.helper[0].getElementsByClassName("name")[0].innerHTML;
-			var price = ui.helper[0].getElementsByClassName("price")[0].innerHTML.split(" ")[0] - 0;
-			var ID = ui.helper[0].dataset.beerid;
-			addItem(ID, name, price, 1);
-		}
-	});
-	$('#favorites button').draggable({
-		cancel: false,
-		helper: "clone",
-		revert: "invalid",
-		drag: function(event, ui) {
-			$(ui.helper).addClass("nicer");
-		}
-	});
-	$('#favorites button').click(function(e) {
-		var name = e.target.getElementsByClassName("name")[0].innerHTML;
-		var price = e.target.getElementsByClassName("price")[0].innerHTML.split(" ")[0] - 0;
-		var ID = e.target.dataset.beerid;
-		addItem(ID, name, price, 1);
-	});
-});
-
 function undo() {
 	if (undoStack.length == 0) {
 		console.error("Undo stack empty");
@@ -170,6 +144,35 @@ function updateCart() {
 	document.getElementById("cart-sum").innerHTML = sum + "&nbsp;SEK";
 }
 
+function startDrag(e) {
+	var id    = e.target.dataset.beerid;
+	var name  = e.target.getElementsByClassName("name")[0].innerHTML;
+	var price = e.target.getElementsByClassName("price")[0].innerHTML.split(" ")[0] - 0;
+	e.dataTransfer.setData("application/x-beer-id",    id);
+	e.dataTransfer.setData("application/x-beer-name",  name);
+	e.dataTransfer.setData("application/x-beer-price", price);
+	e.dataTransfer.setData("text/plain", id + " " + name + " (" + price + " SEK)");
+	e.dataTransfer.effectAllowed = "copy";
+}
+
+function checkDroppable(e) {
+	for (var i = 0; i < e.dataTransfer.types.length; i++) {
+		if (e.dataTransfer.types[i] == "application/x-beer-id") {
+			e.preventDefault();
+			e.dataTransfer.effectAllowed = "copy";
+			return;
+		}
+	}
+}
+
+function drop(e) {
+	e.preventDefault();
+	var id    = e.dataTransfer.getData("application/x-beer-id") - 0;
+	var name  = e.dataTransfer.getData("application/x-beer-name");
+	var price = e.dataTransfer.getData("application/x-beer-price") - 0;
+	addItem(id, name, price, 1);
+}
+
 $(document).scroll(function() {
 	if($(document).scrollTop() >= 20) {
 		$('#main-header').css('background', 'rgba(0, 0, 0, 0.9)');
@@ -191,6 +194,17 @@ function initCart() {
 	document.getElementById("nav-undo").disabled = (undoStack.length == 0);
 	document.getElementById("nav-redo").disabled = (redoStack.length == 0);
 	updateCart();
+
+	var buttons = document.getElementById("favorites").getElementsByClassName("fav-beer");
+	for (var i = 0; i < buttons.length; i++) {
+		var button = buttons[i];
+		button.draggable = true;
+		button.addEventListener("dragstart", startDrag, false);
+	}
+	document.getElementById("table_order").addEventListener("dragenter", checkDroppable, false);
+	document.getElementById("table_order").addEventListener("dragover",  checkDroppable, false);
+	document.getElementById("table_order").addEventListener("drop",      drop,           false);
 }
+
 
 document.addEventListener("DOMContentLoaded", initCart, false);

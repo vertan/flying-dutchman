@@ -99,7 +99,10 @@ textarea {
 	color: inherit;
 }
 
+.fav-beer,
 button {
+	display: inline-block;
+	padding: 0 6px;
 	border: gray outset 2px;
 	border-radius: .2em;
 	background: rgba(255, 255, 255, 0.6);
