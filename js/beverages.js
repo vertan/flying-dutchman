@@ -62,9 +62,7 @@ function listofbeverages(response) {
 }
 
 function init() {
-		sessionStorage.setItem("username","jorass");
-		sessionStorage.setItem("password","jorass");
-		
+	
 		beveragesListElement = document.getElementById("List");
 		var username = sessionStorage.getItem("username");
 		var password = sessionStorage.getItem("password");
