@@ -12,6 +12,7 @@ function deepCopy(o) {
 	return out;
 }
 
+// Returns the index in the cart array where the entry with the given id is located, or -1 if it's not in the cart
 function itemIndexOf(id) {
 	for (var i = 0; i < cart.length; i++) {
 		if (cart[i].id == id) {
@@ -21,6 +22,7 @@ function itemIndexOf(id) {
 	return -1;
 }
 
+// Adds a new item or increments the quantity of an existing item in the cart
 function addItem(id, name, price, quantity = 1) {
 	if (itemIndexOf(id) == -1) {
 		pushUndo();
@@ -65,6 +67,7 @@ function getQuantity(id) {
 	}
 }
 
+// Updates the quantity of an entry that is already in the cart
 function setQuantity(id, newQuantity) {
 	var i = itemIndexOf(id);
 	if (i == -1) {
@@ -78,6 +81,7 @@ function setQuantity(id, newQuantity) {
 	}
 }
 
+// Increments or decrements the quantity of an an item that is already in the cart, and removes it if the quantity reaches zero
 function changeQuantity(id, delta) {
 	var quantity = getQuantity(id) + delta;
 	if (quantity > 0) {
@@ -148,6 +152,7 @@ function redo() {
 	updateCart();
 }
 
+// Saves the state of the cart, then constructs the HTML for it and replaces the old cart on the page
 function updateCart() {
 	var tbody = document.getElementById("cart-body");
 	var sum = 0;
@@ -171,14 +176,6 @@ function updateCart() {
 	}
 	document.getElementById("cart-sum").innerHTML = sum + "&nbsp;SEK";
 }
-
-$(document).scroll(function() {
-	if($(document).scrollTop() >= 20) {
-		$('#main-header').css('background', 'rgba(0, 0, 0, 0.9)');
-	} else {
-		$('#main-header').css('background', 'rgba(0, 0, 0, 0.45)');
-	}
-});
 
 function initCart() {
 	cart      = sessionStorage.getItem("cart");

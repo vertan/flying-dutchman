@@ -1,10 +1,3 @@
-/* This function should take an identifier, look it up in some dictionary, and replace placeholders.
- * For example, if the dictionary contains the entry "'welcome-msg': 'Welcome, %2, to %1.'",
- * S("welcome-msg", "The Flying Duchman", "Jory") should return "Welcome, Jory, to The Flying Duchman.".
- * 
- * TODO: Plurals.
- */
-
 var userLang;
 var dict;
 
@@ -37,6 +30,7 @@ function init() {
 	});
 }
 
+// Returns the translation string from the dictionary given wordID as the key
 function getWord(dictionary, wordID) {
 	var result = dictionary[wordID];
 	if (result != undefined) {
@@ -84,6 +78,9 @@ function getFile(lang) {
 	});
 }
 
+// Returns the translated string with key id and replaces numbered placeholders with the remaining arguments.
+// For example, given that the current dictionary contains the entry "''welcome-msg': 'Welcome, %2, to %1.'",
+// S("welcome-msg", "The Flying Duchman", "Jory") should return "Welcome, Jory, to The Flying Duchman.".
 function S(id) {
 	var string = getWord(dict, id);
 	if (string == "[i18n error] String not found!") {
@@ -95,6 +92,7 @@ function S(id) {
 	return string;
 }
 
+// Used in case a string couldn't be found in the dictionary
 function getDummyString(arguments) {
 	var id = arguments[0];
 	var string = id;
