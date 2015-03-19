@@ -1,3 +1,10 @@
+#stats-button {
+	font-size: 1.5em;
+	padding: 0.2em 1em;
+	margin: 0.5em 0;
+	float: right;
+}
+
 table.orders {
 	width: 100%;
 	border-spacing: 0px;

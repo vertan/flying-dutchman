@@ -1,35 +1,58 @@
-#container {
-	background-color: rgba(255,255,255,0); /* 0.6 */
-	height: 95%;
-	position: relative;
-}
 #buttons {
 	bottom: 0px;
 	font-size: 3em;
 	margin: 10px;
 	padding: 0 0px;
 	text-align: center;
-	width: 1000px;
 }
 table {
 	border: 0px;
 	border-collapse: separate;
 	border-spacing: 0 5px;
-	/* margin: 10px; */
 	padding: 0 10px;
-	width: 1004px;
 	color: rgb(0, 0, 0);
 }
-table button {
+#cart-container {
+	display: inline-block;
+	width: 30em;
+}
+
+#cart-undo-bar > button {
+	width: 40%;
+}
+#undo-button .icon {
+	background-image: url("../images/undo.svg");
+}
+#redo-button .icon {
+	background-image: url("../images/redo.svg");
+}
+.icon:disabled {
+	opacity: 0.5;
+}
+
+#cart-container {
+	padding: 1em;
+	border: rgb(128, 192, 255) groove 2px;
+	border-radius: 0.5em;
+	background-color: rgba(0, 128, 255, 0.18)
+}
+#cart-table-container {
+	overflow: auto;
+	height: 30em;
+}
+#cart-table {
+	width: 100%;
+}
+
+#cart-body button {
 	font-size: 1.5em;
 	min-width: 40px;
 }
 
-thead  tr, tfoot tr{
+thead tr, tfoot tr {
 	background-color: rgba(255, 255, 255, 0.8);
 	font-weight: bold;
 }
-
 tr {
 	height: 50px;
 }
@@ -43,12 +66,7 @@ tbody tr:nth-child(2n+1) {
 
 td {
 	min-width: 50px;
-	max-width: 200px;
 	text-align: right;
-}
-#table_afterorder td {
-	min-width: 100px;
-	text-align: center;
 }
 
 td:nth-child(2),
@@ -81,13 +99,6 @@ tfoot > tr > th:first-child {
 	text-align: left;
 }
 
-#cancel {
-	float: left;
-}
 #buy {
 	background-color: rgba(191, 255, 191, 0.6);
-}
-#add, #buy, #logout {
-	float: right;
-	margin-left: 10px;
 }

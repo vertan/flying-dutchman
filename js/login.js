@@ -1,3 +1,5 @@
+// The associated login page is obsolete. Use login-username.html instead.
+
 var pinField;
 var pinButtons;
 
@@ -11,6 +13,7 @@ function login(e) {
 	location.assign("main.html");
 }
 
+// Inserts the digit (or whatever) on the tapped button into the PIN field
 function insertSelf(e) {
 	console.log(e);
 	pinField.value += e.target.innerHTML;

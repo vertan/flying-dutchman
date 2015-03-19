@@ -13,8 +13,16 @@
 		<script src="js/global.js" type="text/javascript"></script>
 	</head>
 	<body>
-
 		<header id="main-header">
+			<div id="navbar">
+				<a href="admin.html">
+					<button id="nav-up">
+						<div class="icon"></div>
+						<span id="administration-header" class="i18n">Administration</span>
+					</button>
+				</a>
+			</div>
+			
 			<div class="header-wrapper">
 				<h1>The Flying Dutchman</h1>
 
@@ -28,22 +36,14 @@
 						<button id="logout-button" class="i18n">Log out</button>
 					</a>
 				</div>
-
 			</div>
-			
 		</header>
 		<div id="container">			
 			<div id="content">
-				
-				<div id="navbar">
-					<a href="admin.html">
-						<button id="nav-up">
-							<div class="icon"></div>
-							<span id="administration-header" class="i18n">Administration</span>
-						</button>
-					</a>
-				</div>
-				
+				<a href="stats.html" class="link-button" accesskey="s">
+					<button id="stats-button" class="i18n">View statistics</button>
+				</a>
+				<h2 id="order-management-header" class="i18n">Order management</h2>
 				<div id="order-section">
 					<table class="orders">
 						<thead>
@@ -56,7 +56,7 @@
 								<th>Price</th>
 								<th>Count</th>
 								<th>Updated count</th>
-								<tr>
+							</tr>
 						</thead>
 						<tbody id="manage-orders">
 						</tbody>

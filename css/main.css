@@ -1,3 +1,6 @@
+#content {
+	width: auto;
+}
 #berverages-button {
 	font-size: 3em;
 	padding: .3em;
@@ -34,14 +37,5 @@
 	height: 15% !important;
 	width: 15% !important;
 	font-size: 80% !important;
-	
-}
-
-#cart {
-	display: inline-block;
-	width: 200px;
-	height: 500px;
-	background-color: white;
-	border: black solid 2px;
 	
 }

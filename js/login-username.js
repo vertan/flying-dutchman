@@ -2,8 +2,7 @@ var usernameField;
 var passwordField;
 var adminLoginButton;
 
-// Determines whether to go to buy page or managers page
-var isAdmin;
+var nextPage;
 
 var db;
 
@@ -18,7 +17,7 @@ function login(response) {
 		sessionStorage.setItem("lastName",  response.payload[0].last_name);
 		sessionStorage.setItem("credit",  response.payload[0].assets);
 		sessionStorage.setItem("lang", "en");
-		location.assign(isAdmin ? "admin-menu.html" : "main.html");
+		location.assign(nextPage);
 	} else if (response.type == "error") {
 		var errorMsg = response.payload[0].msg;
 		alert("Error:\n" + errorMsg);
@@ -37,12 +36,12 @@ function initLogin(e) {
 }
 
 function initAdminLogin(e) {
-	isAdmin = true;
+	nextPage = "admin.html";
 	initLogin(e);
 }
 
 function initUserLogin(e) {
-	isAdmin = false;
+	nextPage = "main.html";
 	initLogin(e);
 }
 
